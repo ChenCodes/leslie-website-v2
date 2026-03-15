@@ -35,7 +35,7 @@ export default function Header() {
               href={href}
               className={`text-sm font-medium transition-colors ${
                 isActive
-                  ? "text-[#b8185d] dark:text-[#fbcfe8]"
+                  ? "text-[#25D366]"
                   : "text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
               }`}
             >

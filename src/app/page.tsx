@@ -15,8 +15,6 @@ const placeholderProjects: WorkProject[] = [
     project: "WhatsApp polls • 2025",
     status: "Shipped",
     slug: "whatsapp-polls",
-    passwordProtected: true,
-    password: "leslie",
   },
   {
     name: "Placeholder work name two",
@@ -36,36 +34,36 @@ const placeholderProjects: WorkProject[] = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50">
       <Header />
 
-      <main className="pt-24 md:pt-28 pb-16">
+      <main className="flex-1 pt-24 md:pt-28 pb-16">
         {/* Hero + Experience row */}
-        <section className="px-6 md:px-10 max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        <section className="px-6 md:px-10 max-w-6xl mx-auto pt-16 md:pt-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left: Hero text */}
             <div className="lg:col-span-6">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight tracking-tight text-zinc-900 dark:text-zinc-50">
-                I&apos;m Leslie, a content designer who strives for{" "}
+              <h1 className="mt-0 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight tracking-tight text-zinc-900 dark:text-zinc-50">
+                I&apos;m Leslie, a content designer who helps humans and apps make{" "}
                 <em className="italic text-zinc-600 dark:text-zinc-400">
-                  simplicity driven value
+                  easy conversation
                 </em>
                 .
               </h1>
             </div>
 
-            {/* Right: Experience list - enough width so no column wraps */}
+            {/* Right: Experience list - tabular layout with distinct columns */}
             <div className="lg:col-span-4 min-w-0">
-              <div className="space-y-4 min-w-0 lg:min-w-[28rem]">
+              <div className="space-y-4 min-w-0 lg:min-w-[40rem] mt-3">
                 {experience.map((item) => (
                   <div
                     key={`${item.year}-${item.company}`}
-                    className="grid grid-cols-[8rem_1fr_12rem] gap-1 md:gap-2 items-baseline"
+                    className="grid grid-cols-[6rem_7rem_20rem] gap-6 md:gap-10 items-baseline"
                   >
                     <span className="text-sm text-zinc-500 dark:text-zinc-400 tabular-nums text-left whitespace-nowrap">
                       {item.year}
                     </span>
-                    <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100 whitespace-nowrap">
+                    <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100 text-left whitespace-nowrap">
                       Meta{" "}
                       {item.company.includes("WhatsApp") ? (
                         <span style={{ color: "#25D366" }}>(WhatsApp)</span>
@@ -75,7 +73,7 @@ export default function Home() {
                         item.company.replace(/^Meta\s*/, "")
                       )}
                     </span>
-                    <span className="text-sm text-zinc-500 dark:text-zinc-400 text-right whitespace-nowrap">
+                    <span className="text-sm text-zinc-500 dark:text-zinc-400 text-left whitespace-nowrap">
                       {item.title}
                     </span>
                   </div>
