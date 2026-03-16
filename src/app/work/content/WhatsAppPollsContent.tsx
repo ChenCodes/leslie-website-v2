@@ -81,7 +81,7 @@ export default function WhatsAppPollsContent() {
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
       <h2 className="text-xl font-semibold mt-8 mb-4">
-        My role: Content designer
+        My role
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
         As the content designer on this project, my primary goal was to ensure

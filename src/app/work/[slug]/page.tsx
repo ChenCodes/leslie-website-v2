@@ -28,8 +28,8 @@ const SLUG_CONTENT: Record<
     Component: AISickersWhatsAppContent,
   },
   "meta-avatars-whatsapp": {
-    projectName: "Meta Avatars on WhatsApp",
-    title: "Introducing Meta Avatars to WhatsApp",
+    projectName: "Introducing Meta Avatars to WhatsApp",
+    title: "",
     Component: MetaAvatarsWhatsAppContent,
   },
 };
@@ -38,7 +38,9 @@ export default async function WorkDetailPage({ params }: Props) {
   const { slug } = await params;
   const entry = SLUG_CONTENT[slug];
   const title = entry
-    ? `${entry.projectName}: ${entry.title}`
+    ? entry.title
+      ? `${entry.projectName}: ${entry.title}`
+      : entry.projectName
     : slug
         .split("-")
         .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
@@ -53,7 +55,7 @@ export default async function WorkDetailPage({ params }: Props) {
           href="/"
           className="text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 mb-6 inline-block"
         >
-          ← Back to Work
+          ← Back to case studies
         </Link>
         <h1 className="text-2xl font-semibold mb-8">{title}</h1>
         {ContentComponent ? (

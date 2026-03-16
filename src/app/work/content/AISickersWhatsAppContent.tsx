@@ -3,6 +3,31 @@ import Image from "next/image";
 export default function AISickersWhatsAppContent() {
   return (
     <article>
+      <h2 className="text-xl font-semibold mt-8 mb-4">In short</h2>
+      <div className="pl-4 md:pl-6">
+        <p className="text-zinc-600 dark:text-zinc-400 mb-4">
+          <strong>Problem:</strong> WhatsApp users found existing sticker packs
+          irrelevant, childish, or culturally mismatched, while many users also
+          lacked familiarity with generative AI.
+        </p>
+        <p className="text-zinc-600 dark:text-zinc-400 mb-4">
+          <strong>The goal:</strong> Drive awareness, understanding, and adoption
+          of AI stickers across a global audience with varying digital literacy
+          levels.
+        </p>
+        <p className="text-zinc-600 dark:text-zinc-400 mb-4">
+          <strong>My role:</strong> Owned the end-to-end content strategy for the
+          AI sticker launch on WhatsApp, designing educational messaging, prompt
+          guidance, and reporting flows to help users confidently create and share
+          AI-generated stickers.
+        </p>
+        <p className="text-zinc-600 dark:text-zinc-400 mb-6">
+          <strong>Impact:</strong> The launch reached 100K+ daily active users,
+          increasing expressive messaging by enabling users to instantly generate
+          personalized stickers tailored to their conversations.
+        </p>
+      </div>
+
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         In 2023, Meta&apos;s family of apps entered the generative AI space with
         the launch of AI stickers—a feature that allows users to generate any

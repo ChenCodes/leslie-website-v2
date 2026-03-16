@@ -62,8 +62,7 @@ export default function AICommunicationsPlaybookContent() {
         The investigation: Auditing all existing comms
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-        I audited Figma libraries and hundreds of design files to understand
-        current patterns and gaps.
+        To create baseline rules and keep what was working, I audited Figma libraries and hundreds of design files.
       </p>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
         <li>

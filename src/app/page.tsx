@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WorkCard from "./components/WorkCard";
 import type { WorkProject } from "./components/WorkCard";
+import CaseByteCard from "./components/CaseByteCard";
+import type { CaseByteItem } from "./components/CaseByteCard";
 
 const experience = [
   { year: "2024", company: "Meta (WhatsApp)", title: "Senior Content Designer" },
@@ -18,7 +20,7 @@ const placeholderProjects: WorkProject[] = [
     previewImage: "/work/whatsapp-polls/polls-thumbnail.png",
   },
   {
-    name: "Meta Avatars on WhatsApp",
+    name: "Introducing Meta Avatars to WhatsApp",
     project: "Bringing Meta Avatars to WhatsApp through a privacy lens",
     slug: "meta-avatars-whatsapp",
     passwordProtected: true,
@@ -40,6 +42,29 @@ const placeholderProjects: WorkProject[] = [
     passwordProtected: true,
     password: "leslie",
     previewImage: "/work/ai-communications-playbook/decision-tree-thumbnail-2.png",
+  },
+];
+
+const caseBytes: CaseByteItem[] = [
+  {
+    name: "Introducing video messages at WhatsApp",
+    title: "WhatsApp video messages",
+    slug: "whatsapp-video-messages",
+  },
+  {
+    name: "WhatsApp end call survey",
+    title: "Call survey redesign",
+    slug: "end-call-survey-redesign",
+  },
+  {
+    name: "Warning WhatsApp callers with battery restriction turned on",
+    title: "Battery restriction dialog",
+    slug: "battery-restriction-dialog",
+  },
+  {
+    name: "Verifying that my chat is E2E encrypted",
+    title: "Messenger E2E security checks (exploration)",
+    slug: "messenger-e2e-security-checks",
   },
 ];
 
@@ -109,6 +134,20 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {placeholderProjects.map((project) => (
               <WorkCard key={project.slug} project={project} />
+            ))}
+          </div>
+        </section>
+
+        <section
+          id="case-bytes"
+          className="px-6 md:px-10 max-w-6xl mx-auto mt-20 md:mt-28 scroll-mt-24"
+        >
+          <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mb-10">
+            Case bytes
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            {caseBytes.map((item) => (
+              <CaseByteCard key={item.slug} item={item} />
             ))}
           </div>
         </section>
