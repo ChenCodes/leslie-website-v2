@@ -13,7 +13,7 @@ const experience = [
 const placeholderProjects: WorkProject[] = [
   {
     name: "WhatsApp polls",
-    project: "Designing a faster way to decide for millions.",
+    project: "Designing a faster way to decide for millions",
     slug: "whatsapp-polls",
     previewImage: "/work/whatsapp-polls/polls-thumbnail.png",
   },
@@ -27,7 +27,7 @@ const placeholderProjects: WorkProject[] = [
   },
   {
     name: "AI Stickers on WhatsApp",
-    project: "Driving Awareness and Early Adoption.",
+    project: "Driving awareness and early adoption",
     slug: "ai-stickers-whatsapp",
     passwordProtected: true,
     password: "leslie",
@@ -35,7 +35,7 @@ const placeholderProjects: WorkProject[] = [
   },
   {
     name: "AI communications playbook",
-    project: "An org-wide framework for design consistency and faster decision making.",
+    project: "An org-wide framework for design consistency and faster decision making",
     slug: "ai-communications-playbook",
     passwordProtected: true,
     password: "leslie",
@@ -53,19 +53,18 @@ export default function Home() {
         <section className="px-6 md:px-10 max-w-6xl mx-auto pt-16 md:pt-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left: Hero text */}
-            <div className="lg:col-span-6">
+            <div className="lg:col-span-6 space-y-3">
               <h1 className="mt-0 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight tracking-tight text-zinc-900 dark:text-zinc-50">
-                I&apos;m Leslie, a content designer who helps humans and apps make{" "}
-                <em className="italic text-zinc-600 dark:text-zinc-400">
-                  easy conversation
-                </em>
-                .{" "}
+                I&apos;m Leslie, a content designer.
+              </h1>
+              <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 leading-snug">
+                I design usable conversations between people and products to drive business growth.{" "}
                 <MessageCircleCheck
                   className="inline-block align-middle"
-                  size={42}
+                  size={28}
                   style={{ color: "#25D366" }}
                 />
-              </h1>
+              </p>
             </div>
 
             {/* Right: Experience list - tabular layout with distinct columns */}
