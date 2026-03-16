@@ -66,19 +66,14 @@ export default function AICommunicationsPlaybookContent() {
       </p>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
         <li>
-          <strong>Identifying patterns:</strong> I looked at designs for AI image
-          generation, private chat experiences, and core AI tools to note which
-          components worked best for specific messaging.
+          <strong>Building the foundation:</strong> I looked at designs for AI
+          image generation, private chat experiences, and core AI tools to note
+          which components worked best for specific messaging.
         </li>
         <li>
-          <strong>Spotting gaps:</strong> The audit confirmed that different
-          teams were often creating different, custom UI treatments for the exact
-          same type of privacy disclosure.
-        </li>
-        <li>
-          <strong>Building the foundation:</strong> This audit provided the raw
-          data needed to see where our design library was falling short and which
-          new, standardized components were required.
+          <strong>Spotting inconsistencies:</strong> The audit confirmed that
+          different teams were often creating different, custom UI treatments for
+          the exact same type of privacy disclosure.
         </li>
       </ul>
 

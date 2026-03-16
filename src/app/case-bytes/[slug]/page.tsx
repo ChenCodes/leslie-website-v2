@@ -53,7 +53,7 @@ export default async function CaseByteDetailPage({ params }: Props) {
           href="/#case-bytes"
           className="text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 mb-6 inline-block"
         >
-          ← Back to case bytes
+          ← Back to case bites
         </Link>
         <h1 className="text-2xl font-semibold mb-8">{title}</h1>
         {ContentComponent ? (
