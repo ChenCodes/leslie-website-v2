@@ -143,7 +143,7 @@ export default function Home() {
           className="px-6 md:px-10 max-w-6xl mx-auto mt-20 md:mt-28 scroll-mt-24"
         >
           <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mb-10">
-            Case bytes
+            Case bites
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {caseBytes.map((item) => (
