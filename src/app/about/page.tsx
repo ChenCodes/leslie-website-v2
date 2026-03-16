@@ -16,14 +16,14 @@ export default function AboutPage() {
       <Header />
       <main className="flex-1 pt-24 md:pt-28 px-6 md:px-10 max-w-4xl mx-auto pb-16">
         <h1 className="text-2xl md:text-3xl font-semibold text-zinc-900 dark:text-zinc-50 mb-6 leading-tight">
-          I&apos;m a designer, builder, and a mom to a kitty cat—
+          I&apos;m a designer, builder, and a mom to a kitty -
           <br />
           always seeking new adventures.
         </h1>
 
         <p className="text-zinc-600 dark:text-zinc-400 mb-4">
           I think deeply about people, products, and the future of technology.
-          Currently rabbit-holing into the world of human-AI interaction.
+          Currently rabbit-holing into the world of AI-assisted vibe coding and prototyping.
         </p>
 
         <p className="text-zinc-600 dark:text-zinc-400 mb-6">
@@ -31,7 +31,7 @@ export default function AboutPage() {
           something cool,{" "}
           <a
             href="mailto:leslieleechen@gmail.com"
-            className="font-medium text-[#0866ff] hover:underline"
+            className="font-medium text-[#25D366] hover:underline"
           >
             let&apos;s chat!
           </a>
@@ -53,15 +53,15 @@ export default function AboutPage() {
             target="_blank"
             rel="noopener noreferrer"
             data-cursor-label="View my past experience"
-            className="font-medium text-[#0866ff] hover:underline"
+            className="font-medium text-[#25D366] hover:underline"
           >
             LinkedIn
           </a>
-          , X, or by{" "}
+          {" "} or by{" "}
           <a
             href="mailto:leslieleechen@gmail.com"
             data-cursor-label="Say hi!"
-            className="font-medium text-[#0866ff] hover:underline"
+            className="font-medium text-[#25D366] hover:underline"
           >
             email
           </a>

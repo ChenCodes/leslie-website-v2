@@ -7,7 +7,7 @@ import ThemeToggle from "./ThemeToggle";
 const navLinks = [
   { href: "/", label: "Work", cursorLabel: "View home page" },
   { href: "/about", label: "About", cursorLabel: "View about me" },
-  { href: "/resume", label: "Resume", cursorLabel: "View my resume" },
+  { href: "/resume.pdf", label: "Resume", cursorLabel: "View my resume", external: true },
 ];
 
 export default function Header() {
@@ -24,21 +24,39 @@ export default function Header() {
         </span>
       </Link>
       <nav className="flex items-center gap-4 md:gap-8">
-        {navLinks.map(({ href, label, cursorLabel }) => {
+        {navLinks.map(({ href, label, cursorLabel, external }) => {
           const isActive =
             href === "/"
               ? pathname === "/"
               : pathname === href;
+
+          const commonClasses = `text-sm font-medium transition-colors ${
+            isActive
+              ? "text-[#25D366]"
+              : "text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+          }`;
+
+          if (external) {
+            return (
+              <a
+                key={href}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cursor-label={cursorLabel}
+                className={commonClasses}
+              >
+                {label}
+              </a>
+            );
+          }
+
           return (
             <Link
               key={href}
               href={href}
               data-cursor-label={cursorLabel}
-              className={`text-sm font-medium transition-colors ${
-                isActive
-                  ? "text-[#25D366]"
-                  : "text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-              }`}
+              className={commonClasses}
             >
               {label}
             </Link>
