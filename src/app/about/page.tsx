@@ -16,7 +16,7 @@ export default function AboutPage() {
       <Header />
       <main className="flex-1 pt-24 md:pt-28 px-6 md:px-10 max-w-4xl mx-auto pb-16">
         <h1 className="text-2xl md:text-3xl font-semibold text-zinc-900 dark:text-zinc-50 mb-6 leading-tight">
-          I&apos;m a designer, builder, & dancer—
+          I&apos;m a designer, builder, and a mom to a kitty cat—
           <br />
           always seeking new adventures.
         </h1>
