@@ -7,7 +7,7 @@ import CaseByteCard from "./components/CaseByteCard";
 import type { CaseByteItem } from "./components/CaseByteCard";
 
 const experience = [
-  { year: "2024", company: "Meta (WhatsApp)", title: "Senior Content Designer" },
+  { year: "2024 - Present", company: "Meta (WhatsApp)", title: "Senior Content Designer" },
   { year: "2021", company: "Meta (WhatsApp)", title: "Content Designer" },
   { year: "2020", company: "Meta (Messenger)", title: "Content Strategist" },
 ];
@@ -101,7 +101,7 @@ export default function Home() {
                 {experience.map((item) => (
                   <div
                     key={`${item.year}-${item.company}`}
-                    className="grid grid-cols-[2rem_7rem_20rem] gap-6 md:gap-10 items-baseline"
+                    className="grid grid-cols-[5rem_7rem_20rem] gap-6 md:gap-10 items-baseline"
                   >
                     <span className="text-sm text-zinc-500 dark:text-zinc-400 tabular-nums text-left whitespace-nowrap">
                       {item.year}
