@@ -33,7 +33,7 @@ const placeholderProjects: WorkProject[] = [
     slug: "ai-stickers-whatsapp",
     passwordProtected: true,
     password: "leslie",
-    previewImage: "/work/ai-stickers-whatsapp/ai-stickers-thumbnail.png",
+    previewImage: "/work/ai-stickers-whatsapp/ai-stickers-thumbnail-2.jpg",
   },
   {
     name: "AI communications playbook",
