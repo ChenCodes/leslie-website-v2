@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AICommunicationsPlaybookContent() {
   return (
     <article>
@@ -153,6 +155,15 @@ export default function AICommunicationsPlaybookContent() {
           tree adds structure and context. Crucially, it starts with a
           &ldquo;gatekeeper&rdquo; question: &ldquo;Do we really need to bother
           the user at all?&rdquo;
+          <div className="mt-4 mb-2 max-w-full">
+            <Image
+              src="/work/ai-communications-playbook/decision-tree.png"
+              alt="Flow chart for when to show or hide information: gatekeeper question on user safety and control, branching to intro bottom sheet, tooltip, mid card, system message, or rely on the design"
+              width={900}
+              height={500}
+              className="rounded-lg border border-zinc-200 dark:border-zinc-800 w-full h-auto"
+            />
+          </div>
         </li>
         <li>
           <strong>The roles and responsibilities chart: The strategic overview.</strong>{" "}
@@ -160,6 +171,15 @@ export default function AICommunicationsPlaybookContent() {
           that maps specific message types—such as privacy disclosures, new
           feature releases, and educational tips—to their approved design
           treatments.
+          <div className="mt-4 mb-2 max-w-full">
+            <Image
+              src="/work/ai-communications-playbook/roles-responsibilities-chart.png"
+              alt="Roles &amp; Responsibilities for User Messaging: system message, bottom sheet, in-line text, tooltip, and mid-card with goals, use cases, and examples"
+              width={800}
+              height={600}
+              className="rounded-lg border border-zinc-200 dark:border-zinc-800 w-full h-auto"
+            />
+          </div>
         </li>
         <li>
           <strong>&ldquo;In the wild&rdquo; gallery: Proven success.</strong> To
