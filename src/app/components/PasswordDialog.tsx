@@ -49,14 +49,11 @@ export default function PasswordDialog({
     <Dialog open={open} onOpenChange={(next) => !next && onClose()}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <div className="flex items-center gap-2 text-muted-foreground mb-1">
-            <LockIcon className="h-5 w-5 shrink-0" />
-            <span className="text-sm font-medium">Password protected</span>
-          </div>
           <DialogTitle className="text-lg">{projectName}</DialogTitle>
           <DialogDescription>
             Enter the password to view this work.
           </DialogDescription>
+          
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           <label className="block">
@@ -76,6 +73,17 @@ export default function PasswordDialog({
               </p>
             )}
           </label>
+          <p className="text-sm text-muted-foreground mt-2">
+            Want to see my work? Please reach out via{" "}
+            <a
+              href="mailto:leslieleechen@gmail.com"
+              data-cursor-label="Say hi!"
+              className="font-medium text-foreground underline underline-offset-2 hover:no-underline"
+            >
+              email
+            </a>
+            !
+          </p>
           <DialogFooter className="gap-2 sm:gap-0">
             <DialogClose
               className="inline-flex h-9 items-center justify-center rounded-lg border border-border bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring dark:border-input dark:bg-input/30 dark:hover:bg-input/50"
@@ -85,6 +93,7 @@ export default function PasswordDialog({
             <Button type="submit">View</Button>
           </DialogFooter>
         </form>
+        
       </DialogContent>
     </Dialog>
   );

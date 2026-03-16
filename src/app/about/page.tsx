@@ -41,8 +41,9 @@ export default function AboutPage() {
           Outside of content design and being a mom to a kitty cat, I&apos;m:
         </p>
         <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
-          <li>figuiring out how to best serve my community</li>
+          <li>figuring out how to best serve my community</li>
           <li>searching for delicious sushi spots</li>
+          <li>on the prowl for coffee shops with a great vibe</li>
         </ul>
 
         <p className="text-zinc-600 dark:text-zinc-400 mb-6">

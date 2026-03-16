@@ -58,7 +58,7 @@ export default function CursorRing() {
       {/* Badge on top when hovered — 8px above cursor */}
       <div
         className="absolute left-0 top-0 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#25D366] px-3 py-1.5 text-sm font-medium text-white whitespace-nowrap shadow-md transition-opacity duration-150 ease-out"
-        style={{ opacity: label ? 1 : 0, marginTop: -16 }}
+        style={{ opacity: label ? 1 : 0, marginTop: -8 }}
       >
         {label || "\u00A0"}
       </div>
