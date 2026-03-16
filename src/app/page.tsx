@@ -19,7 +19,7 @@ const placeholderProjects: WorkProject[] = [
   },
   {
     name: "Meta Avatars on WhatsApp",
-    project: "Introducing Meta Avatars to WhatsApp",
+    project: "Bringing Meta Avatars to WhatsApp through a privacy lens",
     slug: "meta-avatars-whatsapp",
     passwordProtected: true,
     password: "leslie",
@@ -54,16 +54,19 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left: Hero text */}
             <div className="lg:col-span-6 space-y-3">
-              <h1 className="mt-0 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight tracking-tight text-zinc-900 dark:text-zinc-50">
-                I&apos;m Leslie, a content designer.
+              <h1 className="relative inline-block mt-0 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight tracking-tight text-zinc-900 dark:text-zinc-50">
+                I&apos;m Leslie,{" "}
+                <span className="relative inline-block">
+                  a content designer.
+                  <MessageCircleCheck
+                    className="absolute -top-3 -right-6"
+                    size={28}
+                    style={{ color: "#25D366" }}
+                  />
+                </span>
               </h1>
               <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 leading-snug">
-                I design usable conversations between people and products to drive business growth.{" "}
-                <MessageCircleCheck
-                  className="inline-block align-middle"
-                  size={28}
-                  style={{ color: "#25D366" }}
-                />
+                I design content that wins users over and drives business growth.
               </p>
             </div>
 

@@ -84,13 +84,13 @@ export default function PasswordDialog({
             </a>
             !
           </p>
-          <DialogFooter className="gap-2 sm:gap-0">
+          <DialogFooter className="flex gap-2 sm:gap-2">
             <DialogClose
-              className="inline-flex h-9 items-center justify-center rounded-lg border border-border bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring dark:border-input dark:bg-input/30 dark:hover:bg-input/50"
+              className="inline-flex flex-1 h-9 items-center justify-center rounded-lg border border-border bg-background px-4 py-2 text-sm font-medium shadow-none transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring dark:border-input dark:bg-input/30 dark:hover:bg-input/50"
             >
               Cancel
             </DialogClose>
-            <Button type="submit">View</Button>
+            <Button type="submit" size="lg" className="flex-1">View</Button>
           </DialogFooter>
         </form>
         
