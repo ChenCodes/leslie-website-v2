@@ -26,10 +26,12 @@ const placeholderProjects: WorkProject[] = [
     password: "leslie",
   },
   {
-    name: "Placeholder work name three",
-    project: "Project Name • 2024",
-    status: "Handed off",
-    slug: "placeholder-three",
+    name: "Launching AI Stickers on WhatsApp",
+    project: "Driving Awareness and Early Adoption",
+    status: "Pending",
+    slug: "ai-stickers-whatsapp",
+    passwordProtected: true,
+    password: "leslie",
   },
 ];
 

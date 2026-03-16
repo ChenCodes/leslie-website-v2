@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
-  { href: "/", label: "Work" },
-  { href: "/about", label: "About" },
-  { href: "/resume", label: "Resume" },
+  { href: "/", label: "Work", cursorLabel: "View home page" },
+  { href: "/about", label: "About", cursorLabel: "View about me" },
+  { href: "/resume", label: "Resume", cursorLabel: "View my resume" },
 ];
 
 export default function Header() {
@@ -24,7 +24,7 @@ export default function Header() {
         </span>
       </Link>
       <nav className="flex items-center gap-4 md:gap-8">
-        {navLinks.map(({ href, label }) => {
+        {navLinks.map(({ href, label, cursorLabel }) => {
           const isActive =
             href === "/"
               ? pathname === "/"
@@ -33,6 +33,7 @@ export default function Header() {
             <Link
               key={href}
               href={href}
+              data-cursor-label={cursorLabel}
               className={`text-sm font-medium transition-colors ${
                 isActive
                   ? "text-[#25D366]"

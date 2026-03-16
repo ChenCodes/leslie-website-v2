@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "sonner";
+import CursorRing from "./components/CursorRing";
 import ThemeProvider from "./components/ThemeProvider";
 import "./globals.css";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           {children}
+          <CursorRing />
           <Toaster position="top-center" richColors />
         </ThemeProvider>
       </body>

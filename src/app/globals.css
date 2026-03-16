@@ -162,3 +162,13 @@ body {
     @apply font-sans;
   }
 }
+
+/* Text selection: WhatsApp green, white text — at end so it overrides everything */
+*::selection {
+  color: white !important;
+  background-color: #25D366 !important;
+}
+*::-moz-selection {
+  color: white !important;
+  background-color: #25D366 !important;
+}

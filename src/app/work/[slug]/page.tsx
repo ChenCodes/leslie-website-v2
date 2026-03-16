@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import WhatsAppPollsContent from "../content/WhatsAppPollsContent";
 import AICommunicationsPlaybookContent from "../content/AICommunicationsPlaybookContent";
+import AISickersWhatsAppContent from "../content/AISickersWhatsAppContent";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -19,6 +20,11 @@ const SLUG_CONTENT: Record<
     projectName: "AI communications playbook",
     title: "An org-wide framework for design consistency and faster decision making",
     Component: AICommunicationsPlaybookContent,
+  },
+  "ai-stickers-whatsapp": {
+    projectName: "Launching AI Stickers on WhatsApp",
+    title: "Driving Awareness and Early Adoption",
+    Component: AISickersWhatsAppContent,
   },
 };
 

@@ -47,6 +47,7 @@ export default function WorkCard({ project }: WorkCardProps) {
       <article
         role="button"
         tabIndex={0}
+        data-cursor-label="View case study"
         onClick={handleCardClick}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {

@@ -26,6 +26,7 @@ export default function Footer() {
           href="https://www.linkedin.com/in/leslie-lee7777/"
           target="_blank"
           rel="noopener noreferrer"
+          data-cursor-label="View my past experience"
           className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 transition-colors"
         >
           LinkedIn
@@ -33,6 +34,7 @@ export default function Footer() {
         <button
           type="button"
           onClick={handleCopyEmail}
+          data-cursor-label="Say hi!"
           className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 transition-colors cursor-pointer bg-transparent border-none p-0 font-inherit"
         >
           Email
