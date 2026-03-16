@@ -2,6 +2,7 @@ import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import WhatsAppPollsContent from "../content/WhatsAppPollsContent";
+import AICommunicationsPlaybookContent from "../content/AICommunicationsPlaybookContent";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -13,6 +14,11 @@ const SLUG_CONTENT: Record<
     projectName: "WhatsApp polls",
     title: "Designing a faster way to decide for millions",
     Component: WhatsAppPollsContent,
+  },
+  "ai-communications-playbook": {
+    projectName: "AI communications playbook",
+    title: "An org-wide framework for design consistency and faster decision making",
+    Component: AICommunicationsPlaybookContent,
   },
 };
 

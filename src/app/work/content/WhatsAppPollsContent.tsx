@@ -1,4 +1,29 @@
 import Image from "next/image";
+import pollsLunchClub from "../../images/polls-lunch-club.gif";
+
+const BADGE_VARIANTS = {
+  uxr: "border-blue-600 text-blue-800 dark:border-blue-400 dark:text-blue-300",
+  legal: "border-emerald-600 text-emerald-800 dark:border-emerald-400 dark:text-emerald-300",
+  // Add more variants for future badges, e.g. violet, amber, rose
+} as const;
+
+type BadgeVariant = keyof typeof BADGE_VARIANTS;
+
+function Badge({
+  variant,
+  children,
+}: {
+  variant: BadgeVariant;
+  children: React.ReactNode;
+}) {
+  return (
+    <span
+      className={`inline-block border rounded-full px-3 py-1 text-sm font-medium bg-transparent mb-1.5 ${BADGE_VARIANTS[variant]}`}
+    >
+      {children}
+    </span>
+  );
+}
 
 export default function WhatsAppPollsContent() {
   return (
@@ -110,29 +135,24 @@ export default function WhatsAppPollsContent() {
         immediately directed where to go and what to do: write a poll question.
       </p>
       <div className="my-6 max-w-[240px]">
-        <Image
-          src="/work/whatsapp-polls/polls-lunch-club.png"
-          alt="WhatsApp poll in a group chat (Lunch Club) showing question and options with vote counts"
-          width={800}
-          height={600}
-          className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800"
+        {/* GIF: voting interaction in Lunch Club poll — unoptimized so it animates */}
+        <img
+          src={pollsLunchClub.src}
+          alt="WhatsApp poll in Lunch Club: cursor moves over options, progress bars and vote counts update"
+          width={300}
+          height={300}
+          className="rounded-lg border border-zinc-200 dark:border-zinc-800"
         />
       </div>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-6">
-        Another way we prioritized ease of use was making a new answer option
-        blank appear automatically after a user typed one. This removed the
-        friction of having to manually tap an additional element to bring up a
-        new option field.
-      </p>
-      <p className="text-zinc-500 dark:text-zinc-500 text-sm italic mb-6">
-        (WhatsApp video of flow - NOT recorded yet - don&apos;t have it)
-      </p>
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
       <h2 className="text-xl font-semibold mt-8 mb-4">
         Iterative testing, localization, and approval processes
       </h2>
+      <div className="mb-2">
+        <Badge variant="uxr">UXR and localization</Badge>
+      </div>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         To validate each term and ensure clarity for our global user base, I
         worked with our UXR and localization teams. After each iteration, we
@@ -143,6 +163,9 @@ export default function WhatsAppPollsContent() {
         &ldquo;votes,&rdquo; &ldquo;options,&rdquo; and &ldquo;Allow multiple
         votes.&rdquo;
       </p>
+      <div className="mb-2">
+        <Badge variant="legal">Legal and other reviews</Badge>
+      </div>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
         Once the UX copy was refined through testing, I served as the primary
         point of contact for cross-functional alignment, acquiring formal

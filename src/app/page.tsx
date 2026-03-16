@@ -11,16 +11,17 @@ const experience = [
 
 const placeholderProjects: WorkProject[] = [
   {
-    name: "Designing a faster way to decide for millions",
-    project: "WhatsApp polls • 2025",
+    name: "WhatsApp polls",
+    project: "Designing a faster way to decide for millions",
     status: "Shipped",
     slug: "whatsapp-polls",
+    previewImage: "/work/whatsapp-polls/polls-lunch-club.png",
   },
   {
-    name: "Placeholder work name two",
-    project: "Project Name • 2025",
-    status: "Concept",
-    slug: "placeholder-two",
+    name: "AI communications playbook",
+    project: "An org-wide framework for design consistency and faster decision making",
+    status: "Pending",
+    slug: "ai-communications-playbook",
     passwordProtected: true,
     password: "leslie",
   },

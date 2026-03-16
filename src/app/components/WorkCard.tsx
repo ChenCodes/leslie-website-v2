@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import PasswordDialog from "./PasswordDialog";
 
@@ -11,6 +12,8 @@ export type WorkProject = {
   slug: string;
   passwordProtected?: boolean;
   password?: string;
+  /** Preview image or GIF path (e.g. /work/whatsapp-polls/polls-lunch-club.png). Use a .gif file for animation. */
+  previewImage?: string;
 };
 
 type WorkCardProps = {
@@ -53,8 +56,18 @@ export default function WorkCard({ project }: WorkCardProps) {
         }}
         className="group flex cursor-pointer flex-col overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 transition-colors hover:border-zinc-300 hover:bg-zinc-100 dark:hover:border-zinc-700 dark:hover:bg-zinc-800/50"
       >
-        <div className="relative aspect-video bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-zinc-400 dark:text-zinc-500 text-sm">
-          [GIF placeholder]
+        <div className="relative aspect-video bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center overflow-hidden">
+          {project.previewImage ? (
+            <Image
+              src={project.previewImage}
+              alt=""
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          ) : (
+            <span className="text-zinc-400 dark:text-zinc-500 text-sm">[GIF placeholder]</span>
+          )}
           {isProtected && (
             <span
               className="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-700/90 text-white dark:bg-zinc-600/90"
