@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import WhatsAppPollsContent from "../content/WhatsAppPollsContent";
 import AICommunicationsPlaybookContent from "../content/AICommunicationsPlaybookContent";
 import AISickersWhatsAppContent from "../content/AISickersWhatsAppContent";
+import MetaAvatarsWhatsAppContent from "../content/MetaAvatarsWhatsAppContent";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -25,6 +26,11 @@ const SLUG_CONTENT: Record<
     projectName: "Launching AI Stickers on WhatsApp",
     title: "Driving Awareness and Early Adoption",
     Component: AISickersWhatsAppContent,
+  },
+  "meta-avatars-whatsapp": {
+    projectName: "Meta Avatars on WhatsApp",
+    title: "Introducing Meta Avatars to WhatsApp",
+    Component: MetaAvatarsWhatsAppContent,
   },
 };
 

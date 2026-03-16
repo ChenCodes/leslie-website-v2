@@ -1,3 +1,4 @@
+import { MessageCircleCheck } from "lucide-react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WorkCard from "./components/WorkCard";
@@ -12,25 +13,33 @@ const experience = [
 const placeholderProjects: WorkProject[] = [
   {
     name: "WhatsApp polls",
-    project: "Designing a faster way to decide for millions",
+    project: "Designing a faster way to decide for millions.",
     slug: "whatsapp-polls",
     previewImage: "/work/whatsapp-polls/polls-thumbnail.png",
   },
   {
-    name: "AI communications playbook",
-    project: "An org-wide framework for design consistency and faster decision making",
-    slug: "ai-communications-playbook",
+    name: "Meta Avatars on WhatsApp",
+    project: "Introducing Meta Avatars to WhatsApp",
+    slug: "meta-avatars-whatsapp",
     passwordProtected: true,
     password: "leslie",
-    previewImage: "/work/ai-communications-playbook/decision-tree-thumbnail.png",
+    previewImage: "/work/meta-avatars-whatsapp/avatars-thumbnail.png",
   },
   {
-    name: "Launching AI Stickers on WhatsApp",
-    project: "Driving Awareness and Early Adoption",
+    name: "AI Stickers on WhatsApp",
+    project: "Driving Awareness and Early Adoption.",
     slug: "ai-stickers-whatsapp",
     passwordProtected: true,
     password: "leslie",
     previewImage: "/work/ai-stickers-whatsapp/ai-stickers-thumbnail.png",
+  },
+  {
+    name: "AI communications playbook",
+    project: "An org-wide framework for design consistency and faster decision making.",
+    slug: "ai-communications-playbook",
+    passwordProtected: true,
+    password: "leslie",
+    previewImage: "/work/ai-communications-playbook/decision-tree-thumbnail-2.png",
   },
 ];
 
@@ -50,7 +59,12 @@ export default function Home() {
                 <em className="italic text-zinc-600 dark:text-zinc-400">
                   easy conversation
                 </em>
-                .
+                .{" "}
+                <MessageCircleCheck
+                  className="inline-block align-middle"
+                  size={42}
+                  style={{ color: "#25D366" }}
+                />
               </h1>
             </div>
 
