@@ -8,7 +8,6 @@ import PasswordDialog from "./PasswordDialog";
 export type WorkProject = {
   name: string;
   project: string;
-  status: string;
   slug: string;
   passwordProtected?: boolean;
   password?: string;
@@ -86,17 +85,6 @@ export default function WorkCard({ project }: WorkCardProps) {
           <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-2">
             {project.project}
           </p>
-          <span
-            className={`inline-block text-xs font-medium px-2 py-0.5 rounded ${
-              project.status === "Shipped"
-                ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300"
-                : project.status === "Concept"
-                  ? "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300"
-                  : "bg-zinc-200 text-zinc-700 dark:bg-zinc-700 dark:text-zinc-300"
-            }`}
-          >
-            {project.status}
-          </span>
         </div>
       </article>
 

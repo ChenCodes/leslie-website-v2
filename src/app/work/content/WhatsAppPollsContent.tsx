@@ -61,8 +61,7 @@ export default function WhatsAppPollsContent() {
         like this frequently triggered a flurry of disorganized messages. Group
         member responses were difficult to track, impossible to aggregate
         quickly, and often resulted in notification fatigue. WhatsApp recognized
-        a critical need to help people reach a quick agreement by allowing them
-        to gather a majority vote within the thread.
+        a critical need to help people reach a quick agreement.
       </p>
 
       <h2 className="text-xl font-semibold mt-8 mb-4">Our goal</h2>
@@ -72,7 +71,7 @@ export default function WhatsAppPollsContent() {
         wasn&apos;t just a corporate hypothesis; users had explicitly demanded
         this functionality many times in UXR sessions. Not to mention, this was
         a staple feature offered by most of our messaging competitors and our
-        app counterpart, Messenger. It was time to deliver this feature.
+        app counterpart, Messenger. It was time to deliver.
       </p>
       <p className="text-zinc-500 dark:text-zinc-500 text-sm italic mb-6">
         (Include video of poll interaction from old website - attached gif to
@@ -96,10 +95,11 @@ export default function WhatsAppPollsContent() {
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         I audited existing design and content patterns within competing products
         and studied the specific system languages of Android and iOS. Using the
-        heuristic of recognition over recall, I recommended using input fields
-        and visual affordance that other popular messaging apps already used
-        today. I wanted the design and content to be so familiar that users
-        could onboard without having to think.
+        heuristic of recognition over recall, I recommended using hint text to
+        instruct users on what to do (like our competitors) and having input
+        fields visually feel similar to the Messenger app&apos;s polls feature.
+        I wanted the design and content to be so familiar that users could
+        onboard without having to think.
       </p>
       <div className="my-6 flex flex-wrap gap-6">
         <div className="max-w-[240px]">
@@ -111,7 +111,7 @@ export default function WhatsAppPollsContent() {
             className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800"
           />
           <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-500">
-            (Messenger competitor example)
+            (Messenger example)
           </p>
         </div>
         <div className="max-w-[240px]">
@@ -123,7 +123,7 @@ export default function WhatsAppPollsContent() {
             className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800"
           />
           <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-500">
-            (Apple competitor example)
+            (Apple example)
           </p>
         </div>
       </div>
@@ -134,16 +134,7 @@ export default function WhatsAppPollsContent() {
         cursor) at the &ldquo;Ask question&rdquo; hint text so users are
         immediately directed where to go and what to do: write a poll question.
       </p>
-      <div className="my-6 max-w-[240px]">
-        {/* GIF: voting interaction in Lunch Club poll — unoptimized so it animates */}
-        <img
-          src={pollsLunchClub.src}
-          alt="WhatsApp poll in Lunch Club: cursor moves over options, progress bars and vote counts update"
-          width={300}
-          height={300}
-          className="rounded-lg border border-zinc-200 dark:border-zinc-800"
-        />
-      </div>
+      
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
@@ -313,6 +304,15 @@ export default function WhatsAppPollsContent() {
         finished voting), but we had to be careful to avoid creating too much
         noise.
       </p>
+      <div className="my-6 max-w-full">
+        <Image
+          src="/work/whatsapp-polls/polls-vote-notification.png"
+          alt="Three Android lock-screen notifications showing WhatsApp poll vote updates with 1, 2, and 10 new votes"
+          width={1000}
+          height={600}
+          className="rounded-lg border border-zinc-200 dark:border-zinc-800 w-full h-auto"
+        />
+      </div>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-2">
         <li>
           <strong>Thoughtful trigger logic:</strong> To keep the experience quiet
@@ -340,13 +340,15 @@ export default function WhatsAppPollsContent() {
           </ul>
         </li>
       </ul>
+
       <div className="my-6 max-w-[240px]">
-        <Image
-          src="/work/whatsapp-polls/polls-lunch-club.png"
-          alt="WhatsApp group chat with a poll and View Details, illustrating poll visibility and notification context"
-          width={800}
-          height={600}
-          className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800"
+        {/* GIF: voting interaction in Lunch Club poll — unoptimized so it animates */}
+        <img
+          src={pollsLunchClub.src}
+          alt="WhatsApp poll in Lunch Club: cursor moves over options, progress bars and vote counts update"
+          width={300}
+          height={300}
+          className="rounded-lg border border-zinc-200 dark:border-zinc-800"
         />
       </div>
 
