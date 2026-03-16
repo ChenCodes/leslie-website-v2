@@ -13,7 +13,7 @@ const experience = [
 const placeholderProjects: WorkProject[] = [
   {
     name: "WhatsApp polls",
-    project: "Designing a faster way to decide for millions",
+    project: "Designing a faster way to to make plans for millions",
     slug: "whatsapp-polls",
     previewImage: "/work/whatsapp-polls/polls-thumbnail.png",
   },
@@ -59,7 +59,7 @@ export default function Home() {
                 <span className="relative inline-block">
                   a content designer.
                   <MessageCircleCheck
-                    className="absolute -top-3 -right-6"
+                    className="absolute -top-3 -right-6 hero-icon-hover cursor-pointer"
                     size={28}
                     style={{ color: "#25D366" }}
                   />
@@ -104,7 +104,7 @@ export default function Home() {
         {/* Work projects: GIF + name + project + year + status */}
         <section className="px-6 md:px-10 max-w-6xl mx-auto mt-20 md:mt-28">
           <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mb-10">
-            Work
+            Case studies
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {placeholderProjects.map((project) => (

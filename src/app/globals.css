@@ -163,6 +163,25 @@ body {
   }
 }
 
+/* Hero MessageCircleCheck hover: bounce up + scale up, then slowly return */
+@keyframes hero-icon-bounce {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-10px) scale(1.25);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+.hero-icon-hover {
+  display: inline-block;
+}
+.hero-icon-hover:hover {
+  animation: hero-icon-bounce 0.6s ease-out;
+}
+
 /* Text selection: WhatsApp green, white text — at end so it overrides everything */
 *::selection {
   color: white !important;

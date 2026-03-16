@@ -14,7 +14,7 @@ const SLUG_CONTENT: Record<
 > = {
   "whatsapp-polls": {
     projectName: "WhatsApp polls",
-    title: "Designing a faster way to decide for millions",
+    title: "Designing a faster way to make plans for millions",
     Component: WhatsAppPollsContent,
   },
   "ai-communications-playbook": {
