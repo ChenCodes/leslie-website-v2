@@ -59,7 +59,7 @@ export default function WhatsAppPollsContent() {
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         In the world of large WhatsApp group chats, simple, routine questions
         like this frequently triggered a flurry of disorganized messages. Group
-        member responses were difficult to track, impossible to aggregate
+        members' responses were difficult to track, impossible to aggregate
         quickly, and often resulted in notification fatigue. WhatsApp recognized
         a critical need to help people reach a quick agreement.
       </p>
@@ -97,7 +97,7 @@ export default function WhatsAppPollsContent() {
         and studied the specific system languages of Android and iOS. Using the
         heuristic of recognition over recall, I recommended using hint text to
         instruct users on what to do (like our competitors) and having input
-        fields visually feel similar to the Messenger app&apos;s polls feature.
+        fields feel visually similar to the Messenger app&apos;s polls feature.
         I wanted the design and content to be so familiar that users could
         onboard without having to think.
       </p>
@@ -128,9 +128,7 @@ export default function WhatsAppPollsContent() {
         </div>
       </div>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-        I also partnered closely with my product designer to determine specific
-        interaction behaviors and make sure each word paired well with the
-        affordance. For example, we placed the blinking vertical line (the
+        I partnered closely with my product designer to determine specific interaction behaviors and made sure each word paired well with the affordance. For example, we placed the blinking vertical line (the
         cursor) at the &ldquo;Ask question&rdquo; hint text so users are
         immediately directed where to go and what to do: write a poll question.
       </p>
@@ -213,7 +211,7 @@ export default function WhatsAppPollsContent() {
         actions. By keeping content to an absolute minimum, the UI remained
         simple and clean. I actively advocated for the removal of unnecessary
         elements that didn&apos;t serve the immediate goal. For example, I
-        advised we forgo filler phrases like &ldquo;Ask your poll
+        advised that we forgo filler phrases like &ldquo;Ask your poll
         question&rdquo; or &ldquo;Add options for your poll&rdquo; in the titles.
         These filler sentences made the experience feel &ldquo;heavy&rdquo; and
         more complicated than it needed to be. By removing articles and keeping
@@ -319,7 +317,7 @@ export default function WhatsAppPollsContent() {
           yet informative, every new vote triggered a silent notification.
           Instead of sending a fresh ping for every participant, the notification
           banner on the user&apos;s lock screen would silently update. If a user
-          retracted a vote, the notification was automatically redacted to
+          retracted a vote, the notification was automatically updated to
           ensure real-time accuracy.
         </li>
         <li>
