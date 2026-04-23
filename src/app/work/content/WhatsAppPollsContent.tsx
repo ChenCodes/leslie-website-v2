@@ -57,21 +57,12 @@ export default function WhatsAppPollsContent() {
         &lsquo;Where should we meet?&rsquo;
       </p>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-        In the world of large WhatsApp group chats, simple, routine questions
-        like this frequently triggered a flurry of disorganized messages. Group
-        members' responses were difficult to track, impossible to aggregate
-        quickly, and often resulted in notification fatigue. WhatsApp recognized
-        a critical need to help people reach a quick agreement.
+        In the world of large WhatsApp group chats, simple, routine questions like this frequently triggered a flurry of disorganized messages. Group members’ responses were difficult to track, impossible to aggregate quickly, and often resulted in notification fatigue. WhatsApp recognized a critical need to help people reach agreement quickly.
       </p>
 
       <h2 className="text-xl font-semibold mt-8 mb-4">Our goal</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-        We needed to design a simple, native flow that let users easily and
-        quickly create a poll that others could vote on. This feature
-        wasn&apos;t just a corporate hypothesis; users had explicitly demanded
-        this functionality many times in UXR sessions. Not to mention, this was
-        a staple feature offered by most of our messaging competitors and our
-        app counterpart, Messenger. It was time to deliver.
+        We needed to design a simple, native flow that let users easily and quickly create a poll that others could vote on. This feature wasn’t just a corporate hypothesis; users had explicitly requested this functionality many times in UXR sessions. Not to mention, this was a staple feature offered by most of our messaging competitors and our app counterpart, Messenger.
       </p>
       <div className="my-6 max-w-[280px]">
         <video
