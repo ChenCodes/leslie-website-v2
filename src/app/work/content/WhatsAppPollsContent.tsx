@@ -73,10 +73,16 @@ export default function WhatsAppPollsContent() {
         a staple feature offered by most of our messaging competitors and our
         app counterpart, Messenger. It was time to deliver.
       </p>
-      <p className="text-zinc-500 dark:text-zinc-500 text-sm italic mb-6">
-        (Include video of poll interaction from old website - attached gif to
-        this email)
-      </p>
+      <div className="my-6 max-w-[280px]">
+        <video
+          controls
+          playsInline
+          className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800"
+        >
+          <source src="/work/whatsapp-polls/polls-recording.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
