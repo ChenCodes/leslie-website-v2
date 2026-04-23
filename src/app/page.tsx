@@ -24,7 +24,7 @@ const placeholderProjects: WorkProject[] = [
     project: "Bringing Meta Avatars to WhatsApp through a privacy lens",
     slug: "meta-avatars-whatsapp",
     passwordProtected: true,
-    password: "leslie",
+    password: "yuk!",
     previewImage: "/work/meta-avatars-whatsapp/avatars-thumbnail.png",
   },
   {
@@ -32,7 +32,7 @@ const placeholderProjects: WorkProject[] = [
     project: "Driving awareness and early adoption",
     slug: "ai-stickers-whatsapp",
     passwordProtected: true,
-    password: "leslie",
+    password: "yuk!",
     previewImage: "/work/ai-stickers-whatsapp/ai-stickers-thumbnail-2.jpg",
   },
   {
@@ -40,7 +40,7 @@ const placeholderProjects: WorkProject[] = [
     project: "An org-wide framework for design consistency and faster decision making",
     slug: "ai-communications-playbook",
     passwordProtected: true,
-    password: "leslie",
+    password: "yuk!",
     previewImage: "/work/ai-communications-playbook/decision-tree-thumbnail-2.png",
   },
 ];

@@ -6,16 +6,10 @@ export default function MetaAvatarsWhatsAppContent() {
       <h2 className="text-xl font-semibold mt-8 mb-4">In short</h2>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
         <li>
-          <strong>The goal:</strong> Launch Meta Avatars on WhatsApp by adapting
-          a &ldquo;flashy&rdquo; social media feature into a privacy-first
-          identity tool that drives global adoption and user expression.
+          <strong>The goal:</strong> Launch Avatars on WhatsApp by adapting this Meta-branded social media feature into a privacy-first identity tool that drives global adoption and user expression.
         </li>
         <li>
-          <strong>My role:</strong> As lead content designer, I defined the tone
-          framework and value proposition. I translated complex user research
-          into a messaging strategy that positioned Avatars as a
-          &ldquo;virtual self&rdquo;—allowing users to engage in large groups
-          without sharing their physical likeness.
+          <strong>My role:</strong> As lead content designer, I defined the tone framework and value proposition. I translated complex user research into a messaging strategy that positioned Avatars as a virtual self—allowing users to express who they are and engage in large groups safely.
         </li>
         <li>
           <strong>The impact:</strong> 2.7M avatars created in the first week.
