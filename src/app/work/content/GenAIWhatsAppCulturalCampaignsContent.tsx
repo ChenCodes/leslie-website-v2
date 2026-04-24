@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function GenAIWhatsAppCulturalCampaignsContent() {
   return (
     <article>
@@ -29,8 +31,17 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
       </ul>
 
       <h2 className="text-xl font-semibold mt-8 mb-4">
-        1. The challenge: A global product with local friction
+        The challenge: A global product with local friction
       </h2>
+      <div className="my-6 max-w-[280px]">
+        <Image
+          src="/work/whatsapp-genai-cultural-campaigns/inspiration-grid-western-centric.png"
+          alt="Meta AI image creation screen showing a grid of Western-leaning inspiration prompts such as superhero chores, red carpet, and action hero themes"
+          width={800}
+          height={1200}
+          className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 h-auto"
+        />
+      </div>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
         A comprehensive audit of WhatsApp&apos;s GenAI experience revealed a
         significant growth constraint. Our &ldquo;Inspiration&rdquo; prompts were
@@ -41,7 +52,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
       </p>
 
       <h2 className="text-xl font-semibold mt-8 mb-4">
-        2. The insight: Cultural expression as a growth lever
+        The insight: Cultural expression as a growth lever
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
         Collaborating with AI Expressions user research and market analysis
@@ -53,7 +64,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
       </p>
 
       <h2 className="text-xl font-semibold mt-8 mb-4">
-        3. The strategy: The localized GTM engine
+        The strategy: The localized GTM engine
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         To get my new marketing operation started, I rallied a group of
@@ -81,7 +92,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
       </ul>
 
       <h2 className="text-xl font-semibold mt-8 mb-4">
-        4. Execution: Building the &ldquo;AI Content Studio&rdquo; (0→1)
+        Execution: Building the &ldquo;AI Content Studio&rdquo; (0→1)
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         With no existing infrastructure for localized AI asset production, I
@@ -109,7 +120,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
       </ul>
 
       <h2 className="text-xl font-semibold mt-8 mb-4">
-        5. High-velocity impact: The India Independence Day launch
+        High-velocity impact: The India Independence Day launch
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         For our first pilot project, I identified a viral trend in patriotic
@@ -135,7 +146,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
       </ul>
 
       <h2 className="text-xl font-semibold mt-8 mb-4">
-        6. Scaling the playbook: Operationalizing success
+        Scaling cultural campaign model
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         I successfully codified this approach into a repeatable global playbook,
@@ -158,7 +169,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
       </ul>
 
       <h2 className="text-xl font-semibold mt-8 mb-4">
-        7. Conclusion: From content to product-led growth
+        Conclusion: The impact
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400">
         This initiative fundamentally redefined the growth trajectory for GenAI
