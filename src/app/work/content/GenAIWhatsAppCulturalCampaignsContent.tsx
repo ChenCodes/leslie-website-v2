@@ -31,7 +31,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
       </ul>
 
       <h2 className="text-xl font-semibold mt-8 mb-4">
-        The challenge: A global product with local friction
+        A global product with low local relevance
       </h2>
       <div className="my-6">
         <div className="max-w-[280px]">
