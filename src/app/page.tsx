@@ -14,10 +14,11 @@ const experience = [
 
 const placeholderProjects: WorkProject[] = [
   {
-    name: "WhatsApp polls",
-    project: "Designing a faster way to to make plans for millions",
-    slug: "whatsapp-polls",
-    previewImage: "/work/whatsapp-polls/polls-thumbnail.png",
+    name: "Accelerating WhatsApp GenAI adoption with cultural campaigns",
+    project: "Regional holidays, AI Content Studio, and global GenAI growth",
+    slug: "whatsapp-genai-cultural-campaigns",
+    previewImage:
+      "/work/whatsapp-genai-cultural-campaigns/genai-cultural-campaigns-thumbnail.png",
   },
   {
     name: "Introducing Meta Avatars to WhatsApp",
@@ -44,11 +45,10 @@ const placeholderProjects: WorkProject[] = [
     previewImage: "/work/ai-communications-playbook/decision-tree-thumbnail-2.png",
   },
   {
-    name: "Accelerating WhatsApp GenAI adoption with cultural campaigns",
-    project: "Regional holidays, AI Content Studio, and global GenAI growth",
-    slug: "whatsapp-genai-cultural-campaigns",
-    previewImage:
-      "/work/whatsapp-genai-cultural-campaigns/genai-cultural-campaigns-thumbnail.png",
+    name: "WhatsApp polls",
+    project: "Designing a faster way to to make plans for millions",
+    slug: "whatsapp-polls",
+    previewImage: "/work/whatsapp-polls/polls-thumbnail.png",
   },
 ];
 
