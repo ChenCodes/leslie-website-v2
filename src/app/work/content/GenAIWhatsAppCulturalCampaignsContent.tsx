@@ -153,6 +153,20 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
       <h2 className="text-xl font-semibold mt-8 mb-4">
         Scaling cultural campaign model
       </h2>
+      <div className="my-6">
+        <div className="max-w-[280px]">
+          <Image
+            src="/work/whatsapp-genai-cultural-campaigns/genai-cultural-campaigns-thumbnail.png"
+            alt="WhatsApp GenAI cultural campaigns thumbnail"
+            width={800}
+            height={1200}
+            className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 h-auto"
+          />
+        </div>
+        <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-500 italic">
+          Cowboys and red carpet events are definitely not universally relevant concepts. 
+        </p>
+      </div>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         I successfully codified this approach into a repeatable global playbook,
         leading to sustained gains across the 2026 calendar:
@@ -174,7 +188,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
       </ul>
 
       <h2 className="text-xl font-semibold mt-8 mb-4">
-        Conclusion: The impact
+        The impact
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400">
         This initiative fundamentally redefined the growth trajectory for GenAI
