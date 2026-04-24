@@ -44,7 +44,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
           />
         </div>
         <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-500 italic">
-          Cowboys and red carpet events are definitely US-centric concepts.
+          Cowboys and red carpet events are definitely not universally relevant concepts. 
         </p>
       </div>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
