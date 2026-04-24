@@ -43,6 +43,13 @@ const placeholderProjects: WorkProject[] = [
     password: "cdtime!",
     previewImage: "/work/ai-communications-playbook/decision-tree-thumbnail-2.png",
   },
+  {
+    name: "Accelerating WhatsApp GenAI adoption with cultural campaigns",
+    project: "Regional holidays, AI Content Studio, and global GenAI growth",
+    slug: "whatsapp-genai-cultural-campaigns",
+    previewImage:
+      "/work/whatsapp-genai-cultural-campaigns/genai-cultural-campaigns-thumbnail.png",
+  },
 ];
 
 const caseBytes: CaseByteItem[] = [

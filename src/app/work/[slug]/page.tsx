@@ -5,6 +5,7 @@ import WhatsAppPollsContent from "../content/WhatsAppPollsContent";
 import AICommunicationsPlaybookContent from "../content/AICommunicationsPlaybookContent";
 import AISickersWhatsAppContent from "../content/AISickersWhatsAppContent";
 import MetaAvatarsWhatsAppContent from "../content/MetaAvatarsWhatsAppContent";
+import GenAIWhatsAppCulturalCampaignsContent from "../content/GenAIWhatsAppCulturalCampaignsContent";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -31,6 +32,11 @@ const SLUG_CONTENT: Record<
     projectName: "Introducing Meta Avatars to WhatsApp",
     title: "",
     Component: MetaAvatarsWhatsAppContent,
+  },
+  "whatsapp-genai-cultural-campaigns": {
+    projectName: "Accelerating WhatsApp GenAI adoption with cultural campaigns",
+    title: "",
+    Component: GenAIWhatsAppCulturalCampaignsContent,
   },
 };
 
