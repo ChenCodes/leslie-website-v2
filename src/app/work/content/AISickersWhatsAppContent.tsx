@@ -1,9 +1,24 @@
 import Image from "next/image";
+import type { CaseStudySection } from "@/app/components/case-study/types";
+
+export const aiStickersWhatsAppSections: CaseStudySection[] = [
+  { id: "in-short", title: "In short" },
+  { id: "problem", title: "Understanding the problem" },
+  { id: "audience", title: "Understanding the audience" },
+  { id: "key-user-needs", title: "Key user needs" },
+  { id: "business-goals", title: "Business goals" },
+  { id: "content-strategy", title: "Content strategy" },
+  { id: "voice-tone", title: "Voice and tone" },
+  { id: "goal-1", title: "Goal 1: Sell and educate the feature" },
+  { id: "goal-2", title: "Goal 2: Guide users through sticker creation" },
+  { id: "goal-3", title: "Goal 3: Enable sticker reporting" },
+  { id: "impact", title: "The impact" },
+];
 
 export default function AISickersWhatsAppContent() {
   return (
     <article>
-      <h2 className="text-xl font-semibold mt-8 mb-4">In short</h2>
+      <h2 id="in-short" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">In short</h2>
       <div className="pl-4 md:pl-6">
         <p className="text-zinc-600 dark:text-zinc-400 mb-4">
           <strong>Problem:</strong> WhatsApp users found existing sticker packs
@@ -40,7 +55,7 @@ export default function AISickersWhatsAppContent() {
         variety and relevance of existing sticker packs.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="problem" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Understanding the problem
       </h2>
       <h3 className="text-lg font-semibold mt-6 mb-2">
@@ -64,7 +79,7 @@ export default function AISickersWhatsAppContent() {
         perfect sticker for their situation.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="audience" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Understanding the audience
       </h2>
       <h3 className="text-lg font-semibold mt-6 mb-2">
@@ -100,7 +115,7 @@ export default function AISickersWhatsAppContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="key-user-needs" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Key user needs
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -135,7 +150,7 @@ export default function AISickersWhatsAppContent() {
         </li>
       </ol>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Business goals</h2>
+      <h2 id="business-goals" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Business goals</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-2">
         The AI sticker launch supported several key WhatsApp goals:
       </p>
@@ -150,7 +165,7 @@ export default function AISickersWhatsAppContent() {
         options.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Content strategy</h2>
+      <h2 id="content-strategy" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Content strategy</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         My content strategy focused on three primary goals:
       </p>
@@ -160,7 +175,7 @@ export default function AISickersWhatsAppContent() {
         <li>Enable safe reporting of harmful stickers</li>
       </ol>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Voice and tone</h2>
+      <h2 id="voice-tone" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Voice and tone</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-2">
         To support adoption across a diverse global audience, the messaging
         framework focused on:
@@ -182,7 +197,7 @@ export default function AISickersWhatsAppContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="goal-1" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Goal 1: Sell and educate the feature
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -257,7 +272,7 @@ export default function AISickersWhatsAppContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="goal-2" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Goal 2: Guide users through sticker creation
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -321,7 +336,7 @@ export default function AISickersWhatsAppContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="goal-3" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Goal 3: Enable sticker reporting
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -370,7 +385,7 @@ export default function AISickersWhatsAppContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">The impact</h2>
+      <h2 id="impact" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">The impact</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-2">
         After launching AI stickers on WhatsApp:
       </p>

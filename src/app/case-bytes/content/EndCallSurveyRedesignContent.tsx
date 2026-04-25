@@ -1,9 +1,21 @@
 import Image from "next/image";
+import type { CaseStudySection } from "@/app/components/case-study/types";
+
+export const endCallSurveyRedesignSections: CaseStudySection[] = [
+  { id: "problem", title: "Problem" },
+  { id: "objectives", title: "Objectives" },
+  { id: "old-survey", title: "Old call survey" },
+  { id: "new-survey", title: "New call survey" },
+  { id: "changes", title: "Changes I made" },
+  { id: "how-i-made-them", title: "How I made them" },
+  { id: "design-considerations", title: "Design considerations" },
+  { id: "impact", title: "Impact" },
+];
 
 export default function EndCallSurveyRedesignContent() {
   return (
     <article>
-      <h2 className="text-xl font-semibold mt-8 mb-4">Problem</h2>
+      <h2 id="problem" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Problem</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
         WhatsApp&apos;s call survey only had four answers to choose from and
         covered less than 35% of bad use cases. Users could not report many
@@ -12,7 +24,7 @@ export default function EndCallSurveyRedesignContent() {
         abounded — unaddressed.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Objectives</h2>
+      <h2 id="objectives" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Objectives</h2>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
         <li>
           Collaborate with product design to keep the survey UI looking simple
@@ -30,7 +42,7 @@ export default function EndCallSurveyRedesignContent() {
         </li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Old call survey</h2>
+      <h2 id="old-survey" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Old call survey</h2>
       <div className="my-6 max-w-full">
         <Image
           src="/case-bytes/end-call-survey-redesign/old-survey.png"
@@ -44,7 +56,7 @@ export default function EndCallSurveyRedesignContent() {
         Android version (left) and the iOS version (right)
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">New call survey</h2>
+      <h2 id="new-survey" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">New call survey</h2>
       <div className="my-6 max-w-full">
         <Image
           src="/case-bytes/end-call-survey-redesign/new-survey-android.png"
@@ -58,7 +70,7 @@ export default function EndCallSurveyRedesignContent() {
         Android version
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Changes I made</h2>
+      <h2 id="changes" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Changes I made</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         I added 13 more answer options.
       </p>
@@ -73,7 +85,7 @@ export default function EndCallSurveyRedesignContent() {
         encourage users to participate and impact our app.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">How I made them</h2>
+      <h2 id="how-i-made-them" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">How I made them</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         <strong>The 13 new options:</strong> WhatsApp&apos;s data science team
         went through all freeform user feedback ever submitted through the old
@@ -106,7 +118,7 @@ export default function EndCallSurveyRedesignContent() {
         tone in direct response to what our users said.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Design considerations</h2>
+      <h2 id="design-considerations" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Design considerations</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         I capped the answer options to thirteen because the survey UI looked
         dense and intimidating when we tried to add more.
@@ -117,7 +129,7 @@ export default function EndCallSurveyRedesignContent() {
         organized way.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Impact</h2>
+      <h2 id="impact" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Impact</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         The new survey unlocked deeper insights for the quality engineering
         team to explore.

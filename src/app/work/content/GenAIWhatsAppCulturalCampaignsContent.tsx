@@ -1,9 +1,22 @@
 import Image from "next/image";
+import type { CaseStudySection } from "@/app/components/case-study/types";
+
+export const genAIWhatsAppCulturalCampaignSections: CaseStudySection[] = [
+  { id: "summary", title: "To summarize" },
+  { id: "key-impact", title: "Key impact" },
+  { id: "global-local-relevance", title: "A global product with low local relevance" },
+  { id: "insight-growth-lever", title: "The insight: Cultural expression as a growth lever" },
+  { id: "localized-gtm-engine", title: "The strategy: The localized GTM engine" },
+  { id: "ai-content-studio", title: "Execution: Building the AI Content Studio (0→1)" },
+  { id: "india-campaign", title: "Our first cultural campaign: India Independence Day" },
+  { id: "scaling-model", title: "Scaling cultural campaign model" },
+  { id: "impact", title: "The impact" },
+];
 
 export default function GenAIWhatsAppCulturalCampaignsContent() {
   return (
     <article>
-      <h2 className="text-xl font-semibold mt-8 mb-4">To summarize</h2>
+      <h2 id="summary" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">To summarize</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
         In early 2026, WhatsApp&apos;s GenAI image creation experience faced a
         critical ceiling: while adoption was strong in the US, international
@@ -14,7 +27,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
         cultural campaigns, driving up AI image engagement for key markets.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Key impact</h2>
+      <h2 id="key-impact" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Key impact</h2>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
         <li>
           +70% increase in global baseline DAU (from 1.0M to 1.7M) driven by a
@@ -30,7 +43,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
         </li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="global-local-relevance" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         A global product with low local relevance
       </h2>
       <div className="my-6">
@@ -56,7 +69,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
         underperforming due to a lack of cultural relevance.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="insight-growth-lever" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         The insight: Cultural expression as a growth lever
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
@@ -68,7 +81,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
         circles.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="localized-gtm-engine" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         The strategy: The localized GTM engine
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -96,7 +109,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
         </li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="ai-content-studio" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Execution: Building the &ldquo;AI Content Studio&rdquo; (0→1)
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -124,7 +137,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
         </li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="india-campaign" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Our first cultural campaign: India Independence Day
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -150,7 +163,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
         </li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="scaling-model" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Scaling cultural campaign model
       </h2>
       <div className="my-6">
@@ -187,7 +200,7 @@ export default function GenAIWhatsAppCulturalCampaignsContent() {
         </li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="impact" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         The impact
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400">

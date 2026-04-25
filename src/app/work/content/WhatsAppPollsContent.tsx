@@ -1,5 +1,6 @@
 import Image from "next/image";
 import pollsLunchClub from "../../images/polls-lunch-club.gif";
+import type { CaseStudySection } from "@/app/components/case-study/types";
 
 const BADGE_VARIANTS = {
   uxr: "border-blue-600 text-blue-800 dark:border-blue-400 dark:text-blue-300",
@@ -8,6 +9,18 @@ const BADGE_VARIANTS = {
 } as const;
 
 type BadgeVariant = keyof typeof BADGE_VARIANTS;
+
+export const whatsappPollsSections: CaseStudySection[] = [
+  { id: "in-short", title: "In short" },
+  { id: "group-chat-friction", title: "The problem: Group chat friction" },
+  { id: "our-goal", title: "Our goal" },
+  { id: "my-role", title: "My role" },
+  { id: "recognizable-intuitive-design", title: "Recognizable and intuitive design" },
+  { id: "testing-localization-approvals", title: "Iterative testing, localization, and approval processes" },
+  { id: "tone-framework-strategy", title: "Tone framework and strategy" },
+  { id: "key-content-design-moments", title: "Key content design moments" },
+  { id: "impact", title: "The impact" },
+];
 
 function Badge({
   variant,
@@ -28,7 +41,7 @@ function Badge({
 export default function WhatsAppPollsContent() {
   return (
     <article>
-      <h2 className="text-xl font-semibold mt-8 mb-4">In short</h2>
+      <h2 id="in-short" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">In short</h2>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
         <li>
           <strong>The problem:</strong> Group decision-making was chaotic, leading
@@ -50,7 +63,7 @@ export default function WhatsAppPollsContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="group-chat-friction" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         The problem: Group chat friction
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 italic mb-2">
@@ -60,7 +73,7 @@ export default function WhatsAppPollsContent() {
         In the world of large WhatsApp group chats, simple, routine questions like this frequently triggered a flurry of disorganized messages. Group members’ responses were difficult to track, impossible to aggregate quickly, and often resulted in notification fatigue. WhatsApp recognized a critical need to help people reach agreement quickly.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Our goal</h2>
+      <h2 id="our-goal" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Our goal</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         We needed to design a simple, native flow that let users easily and quickly create a poll that others could vote on. This feature wasn’t just a corporate hypothesis; users had explicitly requested this functionality many times in UXR sessions. Not to mention, this was a staple feature offered by most of our messaging competitors and our app counterpart, Messenger.
       </p>
@@ -77,7 +90,7 @@ export default function WhatsAppPollsContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="my-role" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         My role
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
@@ -86,7 +99,7 @@ export default function WhatsAppPollsContent() {
         content had to be clear, informative, and minimal at the same time.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="recognizable-intuitive-design" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Recognizable and intuitive design
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -133,7 +146,7 @@ export default function WhatsAppPollsContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="testing-localization-approvals" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Iterative testing, localization, and approval processes
       </h2>
       <div className="mb-2">
@@ -161,7 +174,7 @@ export default function WhatsAppPollsContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="tone-framework-strategy" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Tone framework &amp; strategy
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -198,7 +211,7 @@ export default function WhatsAppPollsContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="key-content-design-moments" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Key content design moments
       </h2>
 
@@ -347,7 +360,7 @@ export default function WhatsAppPollsContent() {
         />
       </div>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">The impact</h2>
+      <h2 id="impact" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">The impact</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         The launch was an immediate success. Social media signals indicated a
         warm reception even before the hard data arrived. Soon after, the data

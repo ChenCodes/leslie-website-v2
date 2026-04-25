@@ -1,9 +1,23 @@
 import Image from "next/image";
+import type { CaseStudySection } from "@/app/components/case-study/types";
+
+export const aiCommunicationsPlaybookSections: CaseStudySection[] = [
+  { id: "in-short", title: "In short" },
+  { id: "challenges", title: "The challenges: Clutter, conflict, and missing designs" },
+  { id: "solution", title: "The solution: A playbook for intentional design" },
+  { id: "investigation", title: "The investigation: Auditing all existing comms" },
+  { id: "strategy", title: "The strategy: Silence as the default" },
+  { id: "principles", title: "The three principles of the playbook" },
+  { id: "deliverables", title: "Main deliverables" },
+  { id: "review-process", title: "A rigorous review process" },
+  { id: "buy-in", title: "Getting buy-in and executive enforcement" },
+  { id: "bottom-line", title: "The bottom line" },
+];
 
 export default function AICommunicationsPlaybookContent() {
   return (
     <article>
-      <h2 className="text-xl font-semibold mt-8 mb-4">In short</h2>
+      <h2 id="in-short" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">In short</h2>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
         <li>
           <strong>The problems:</strong> Too many Meta AI feature messages were
@@ -29,7 +43,7 @@ export default function AICommunicationsPlaybookContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="challenges" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         The challenges: Clutter, conflict, and missing designs
       </h2>
       <ol className="list-decimal pl-6 space-y-4 text-zinc-600 dark:text-zinc-400 mb-6">
@@ -49,7 +63,7 @@ export default function AICommunicationsPlaybookContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="solution" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         The solution: A playbook for intentional design
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
@@ -58,7 +72,7 @@ export default function AICommunicationsPlaybookContent() {
         transparent, and necessary.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="investigation" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         The investigation: Auditing all existing comms
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -79,7 +93,7 @@ export default function AICommunicationsPlaybookContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="strategy" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         The strategy: &ldquo;Silence as the default&rdquo;
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -113,7 +127,7 @@ export default function AICommunicationsPlaybookContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="principles" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         The three principles of the playbook
       </h2>
       <ol className="list-decimal pl-6 space-y-4 text-zinc-600 dark:text-zinc-400 mb-6">
@@ -135,7 +149,7 @@ export default function AICommunicationsPlaybookContent() {
         </li>
       </ol>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Main deliverables</h2>
+      <h2 id="deliverables" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Main deliverables</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         I developed three primary tools to transform our workflow from subjective
         debate to standardized execution.
@@ -186,7 +200,7 @@ export default function AICommunicationsPlaybookContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="review-process" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         A rigorous review process
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -210,7 +224,7 @@ export default function AICommunicationsPlaybookContent() {
         </li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="buy-in" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Getting buy-in and executive enforcement
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
@@ -221,7 +235,7 @@ export default function AICommunicationsPlaybookContent() {
         all future in-app communication decisions for AI features at WhatsApp.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">The bottom line</h2>
+      <h2 id="bottom-line" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">The bottom line</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         The AI in-app comms playbook became the ultimate guardrail against noise
         and a way to circumvent wasting time on repetitive discussions.

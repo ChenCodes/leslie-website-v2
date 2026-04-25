@@ -13,6 +13,8 @@ export type WorkProject = {
   password?: string;
   /** Preview image or GIF path (e.g. /work/whatsapp-polls/polls-lunch-club.png). Use a .gif file for animation. */
   previewImage?: string;
+  /** Optional CSS object-position for better thumbnail cropping (e.g. "50% 25%"). */
+  previewObjectPosition?: string;
 };
 
 type WorkCardProps = {
@@ -63,6 +65,11 @@ export default function WorkCard({ project }: WorkCardProps) {
               alt=""
               fill
               className="object-cover"
+              style={
+                project.previewObjectPosition
+                  ? { objectPosition: project.previewObjectPosition }
+                  : undefined
+              }
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           ) : (

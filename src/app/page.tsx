@@ -19,6 +19,7 @@ const placeholderProjects: WorkProject[] = [
     slug: "whatsapp-genai-cultural-campaigns",
     previewImage:
       "/work/whatsapp-genai-cultural-campaigns/genai-cultural-campaigns-thumbnail.png",
+    previewObjectPosition: "50% 42%",
   },
   {
     name: "Introducing Meta Avatars to WhatsApp",

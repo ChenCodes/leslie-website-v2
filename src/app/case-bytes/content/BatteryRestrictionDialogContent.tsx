@@ -1,9 +1,19 @@
 import Image from "next/image";
+import type { CaseStudySection } from "@/app/components/case-study/types";
+
+export const batteryRestrictionDialogSections: CaseStudySection[] = [
+  { id: "problem", title: "Problem" },
+  { id: "objective", title: "Objective" },
+  { id: "warning-dialog", title: "The warning dialog" },
+  { id: "content-strategy", title: "The content strategy" },
+  { id: "challenges", title: "Challenges" },
+  { id: "impact", title: "Impact" },
+];
 
 export default function BatteryRestrictionDialogContent() {
   return (
     <article>
-      <h2 className="text-xl font-semibold mt-8 mb-4">Problem</h2>
+      <h2 id="problem" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Problem</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
         22 million WhatsApp callers had battery restriction turned on while
         calling on an Android device in 2022. However, audio and video issues
@@ -13,14 +23,14 @@ export default function BatteryRestrictionDialogContent() {
         the setting.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Objective</h2>
+      <h2 id="objective" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Objective</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
         Write a warning dialog that lets Android users know (1) what issues can
         happen when this setting is on and (2) teach them how to change the
         setting to avoid issues before they happen.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">The warning dialog</h2>
+      <h2 id="warning-dialog" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">The warning dialog</h2>
       <div className="my-6 max-w-full">
         <Image
           src="/case-bytes/battery-restriction-dialog/full-warning-dialog.png"
@@ -31,7 +41,7 @@ export default function BatteryRestrictionDialogContent() {
         />
       </div>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">The content strategy</h2>
+      <h2 id="content-strategy" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">The content strategy</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         <strong>Timing:</strong> I timed and placed this dialog to show up only
         to users who had this restriction on and had hopped on a call,
@@ -55,7 +65,7 @@ export default function BatteryRestrictionDialogContent() {
         settings.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Challenges</h2>
+      <h2 id="challenges" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Challenges</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         <strong>Changing steps:</strong> Every Android manufacturer has different
         settings (and steps) to turn off battery restriction. There are also
@@ -76,7 +86,7 @@ export default function BatteryRestrictionDialogContent() {
         content.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Impact</h2>
+      <h2 id="impact" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Impact</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         Over 10% of total Android users turned off their battery restriction
         setting in response to this dialog.

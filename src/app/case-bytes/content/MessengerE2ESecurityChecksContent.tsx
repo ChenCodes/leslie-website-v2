@@ -1,9 +1,19 @@
 import Image from "next/image";
+import type { CaseStudySection } from "@/app/components/case-study/types";
+
+export const messengerE2ESecurityChecksSections: CaseStudySection[] = [
+  { id: "project", title: "Project" },
+  { id: "objective", title: "Objective" },
+  { id: "user-research", title: "User research" },
+  { id: "content-design-ideation", title: "Content design ideation" },
+  { id: "verifying-devices-flow", title: "Verifying devices flow" },
+  { id: "key-education", title: "Key education" },
+];
 
 export default function MessengerE2ESecurityChecksContent() {
   return (
     <article>
-      <h2 className="text-xl font-semibold mt-8 mb-4">Project</h2>
+      <h2 id="project" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Project</h2>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
         <li>
           Enable users to check security alerts and verify that each chat member
@@ -15,7 +25,7 @@ export default function MessengerE2ESecurityChecksContent() {
         </li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Objective</h2>
+      <h2 id="objective" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Objective</h2>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
         <li>
           Achieve brevity while providing all information needed to complete this
@@ -28,7 +38,7 @@ export default function MessengerE2ESecurityChecksContent() {
         </li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">User research</h2>
+      <h2 id="user-research" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">User research</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
         Our user research team provided user personas they derived from their
         research sessions on Messenger&apos;s security features and pinpointed
@@ -92,7 +102,7 @@ export default function MessengerE2ESecurityChecksContent() {
         stumble across this new setting.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="content-design-ideation" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Content design ideation
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
@@ -102,7 +112,7 @@ export default function MessengerE2ESecurityChecksContent() {
         create the final version.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="verifying-devices-flow" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Verifying devices flow
       </h2>
       <div className="my-6 max-w-full">
@@ -175,7 +185,7 @@ export default function MessengerE2ESecurityChecksContent() {
         (Note: The Can&apos;t Scan Code design is still in development).
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Key education</h2>
+      <h2 id="key-education" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Key education</h2>
       <h3 className="text-lg font-semibold mt-6 mb-2">
         The user education flow
       </h3>

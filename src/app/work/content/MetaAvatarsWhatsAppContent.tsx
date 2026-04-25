@@ -1,9 +1,20 @@
 import Image from "next/image";
+import type { CaseStudySection } from "@/app/components/case-study/types";
+
+export const metaAvatarsWhatsAppSections: CaseStudySection[] = [
+  { id: "in-short", title: "In short" },
+  { id: "job-to-be-done", title: "The job to be done" },
+  { id: "adapting-avatars", title: "Adapting Meta Avatars for WhatsApp" },
+  { id: "challenges-solutions", title: "Challenges and solutions: Navigating brand perception" },
+  { id: "content-designer-role", title: "What I did as the content designer" },
+  { id: "viral-growth", title: "Then, we designed for viral growth" },
+  { id: "impact", title: "The impact" },
+];
 
 export default function MetaAvatarsWhatsAppContent() {
   return (
     <article>
-      <h2 className="text-xl font-semibold mt-8 mb-4">In short</h2>
+      <h2 id="in-short" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">In short</h2>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
         <li>
           <strong>The goal:</strong> Launch Avatars on WhatsApp by adapting this Meta-branded social media feature into a privacy-first identity tool that drives global adoption and user expression.
@@ -30,7 +41,7 @@ export default function MetaAvatarsWhatsAppContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">The job to be done</h2>
+      <h2 id="job-to-be-done" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">The job to be done</h2>
       <blockquote className="border-l-4 border-zinc-300 dark:border-zinc-600 pl-4 my-4 text-zinc-600 dark:text-zinc-400 italic">
         &ldquo;WhatsApp Avatars are the best way to easily express yourself –
         wherever you are in the world – so you feel closer to the people who
@@ -43,7 +54,7 @@ export default function MetaAvatarsWhatsAppContent() {
         to solve unique privacy and identity challenges.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="adapting-avatars" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Adapting Meta Avatars for WhatsApp
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -61,7 +72,7 @@ export default function MetaAvatarsWhatsAppContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="challenges-solutions" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Challenges and solutions: Navigating brand perception
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -92,7 +103,7 @@ export default function MetaAvatarsWhatsAppContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="content-designer-role" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         What I did as the content designer
       </h2>
 
@@ -168,7 +179,7 @@ export default function MetaAvatarsWhatsAppContent() {
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="viral-growth" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Then, we designed for viral growth
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-2">
@@ -213,7 +224,7 @@ export default function MetaAvatarsWhatsAppContent() {
       
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">The impact</h2>
+      <h2 id="impact" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">The impact</h2>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-4">
         <li>2.7 million avatars created within the first week.</li>
         <li>500,000 daily active users engaging with the feature.</li>

@@ -1,9 +1,19 @@
 import Image from "next/image";
+import type { CaseStudySection } from "@/app/components/case-study/types";
+
+export const whatsAppVideoMessagesSections: CaseStudySection[] = [
+  { id: "context", title: "Context" },
+  { id: "goals", title: "Business and content goals" },
+  { id: "principles", title: "Principles" },
+  { id: "tones", title: "Tones" },
+  { id: "tooltip-explorations", title: "Tooltip explorations" },
+  { id: "results", title: "Results" },
+];
 
 export default function WhatsAppVideoMessagesContent() {
   return (
     <article>
-      <h2 className="text-xl font-semibold mt-8 mb-4">Context</h2>
+      <h2 id="context" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Context</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         In 2023, WhatsApp wanted to provide a convenient and quick way to record
         and send short, real-time and expressive video messages to your loved
@@ -21,7 +31,7 @@ export default function WhatsAppVideoMessagesContent() {
         user research indicated that users had no idea our feature existed.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="goals" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Business and content goals
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -40,7 +50,7 @@ export default function WhatsAppVideoMessagesContent() {
         </li>
       </ol>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Principles</h2>
+      <h2 id="principles" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Principles</h2>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
         <li>
           <strong>Brevity:</strong> I communicated with minimal, snappy language
@@ -57,7 +67,7 @@ export default function WhatsAppVideoMessagesContent() {
         </li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Tones</h2>
+      <h2 id="tones" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Tones</h2>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
         <li>
           <strong>Affirmative:</strong> I sought to sound positive and upbeat to
@@ -70,7 +80,7 @@ export default function WhatsAppVideoMessagesContent() {
         </li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">
+      <h2 id="tooltip-explorations" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
         Tooltip explorations
       </h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -123,7 +133,7 @@ export default function WhatsAppVideoMessagesContent() {
         versus the users who got the second tooltip.
       </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-4">Results</h2>
+      <h2 id="results" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Results</h2>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
         The version with &ldquo;New!&rdquo; (Android: +14%, iOS: +7%) performed
         consistently better than the version with &ldquo;You can…&rdquo;

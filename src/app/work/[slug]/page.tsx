@@ -1,42 +1,59 @@
-import Link from "next/link";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import WhatsAppPollsContent from "../content/WhatsAppPollsContent";
-import AICommunicationsPlaybookContent from "../content/AICommunicationsPlaybookContent";
-import AISickersWhatsAppContent from "../content/AISickersWhatsAppContent";
-import MetaAvatarsWhatsAppContent from "../content/MetaAvatarsWhatsAppContent";
-import GenAIWhatsAppCulturalCampaignsContent from "../content/GenAIWhatsAppCulturalCampaignsContent";
+import CaseStudyLayout from "@/app/components/case-study/CaseStudyLayout";
+import type { CaseStudySection } from "@/app/components/case-study/types";
+import WhatsAppPollsContent, { whatsappPollsSections } from "../content/WhatsAppPollsContent";
+import AICommunicationsPlaybookContent, {
+  aiCommunicationsPlaybookSections,
+} from "../content/AICommunicationsPlaybookContent";
+import AISickersWhatsAppContent, {
+  aiStickersWhatsAppSections,
+} from "../content/AISickersWhatsAppContent";
+import MetaAvatarsWhatsAppContent, {
+  metaAvatarsWhatsAppSections,
+} from "../content/MetaAvatarsWhatsAppContent";
+import GenAIWhatsAppCulturalCampaignsContent, {
+  genAIWhatsAppCulturalCampaignSections,
+} from "../content/GenAIWhatsAppCulturalCampaignsContent";
 
 type Props = { params: Promise<{ slug: string }> };
 
 const SLUG_CONTENT: Record<
   string,
-  { projectName: string; title: string; Component: () => React.JSX.Element }
+  {
+    projectName: string;
+    title: string;
+    Component: () => React.JSX.Element;
+    sections: CaseStudySection[];
+  }
 > = {
   "whatsapp-polls": {
     projectName: "WhatsApp polls",
     title: "Designing a faster way to make plans for millions",
     Component: WhatsAppPollsContent,
+    sections: whatsappPollsSections,
   },
   "ai-communications-playbook": {
     projectName: "AI communications playbook",
     title: "An org-wide framework for design consistency and faster decision making",
     Component: AICommunicationsPlaybookContent,
+    sections: aiCommunicationsPlaybookSections,
   },
   "ai-stickers-whatsapp": {
     projectName: "Launching AI Stickers on WhatsApp",
     title: "Driving Awareness and Early Adoption",
     Component: AISickersWhatsAppContent,
+    sections: aiStickersWhatsAppSections,
   },
   "meta-avatars-whatsapp": {
     projectName: "Introducing Meta Avatars to WhatsApp",
     title: "",
     Component: MetaAvatarsWhatsAppContent,
+    sections: metaAvatarsWhatsAppSections,
   },
   "whatsapp-genai-cultural-campaigns": {
     projectName: "Accelerating WhatsApp GenAI adoption with cultural campaigns",
     title: "",
     Component: GenAIWhatsAppCulturalCampaignsContent,
+    sections: genAIWhatsAppCulturalCampaignSections,
   },
 };
 
@@ -52,18 +69,15 @@ export default async function WorkDetailPage({ params }: Props) {
         .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
         .join(" ");
   const ContentComponent = entry?.Component;
+  const sections = entry?.sections ?? [];
 
   return (
-    <div className="min-h-screen flex flex-col bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50">
-      <Header />
-      <main className="flex-1 pt-24 md:pt-28 px-6 md:px-10 max-w-4xl mx-auto pb-16">
-        <Link
-          href="/"
-          className="text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 mb-6 inline-block"
-        >
-          ← Back to case studies
-        </Link>
-        <h1 className="text-2xl font-semibold mb-8">{title}</h1>
+    <CaseStudyLayout
+      title={title}
+      backHref="/"
+      backLabel="← Back to case studies"
+      sections={sections}
+    >
         {ContentComponent ? (
           <ContentComponent />
         ) : (
@@ -71,8 +85,6 @@ export default async function WorkDetailPage({ params }: Props) {
             Work detail content for this project can go here.
           </p>
         )}
-      </main>
-      <Footer />
-    </div>
+    </CaseStudyLayout>
   );
 }
