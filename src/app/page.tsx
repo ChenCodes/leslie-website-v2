@@ -88,15 +88,7 @@ export default function Home() {
             {/* Left: Hero text */}
             <div className="lg:col-span-6 space-y-3">
               <h1 className="relative inline-block mt-0 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight tracking-tight text-zinc-900 dark:text-zinc-50">
-                I&apos;m Leslie,{" "}
-                <span className="relative inline-block">
-                  a content marketing strategist.
-                  <MessageCircleCheck
-                    className="absolute -top-3 -right-6 hero-icon-hover cursor-pointer"
-                    size={28}
-                    style={{ color: "#25D366" }}
-                  />
-                </span>
+                I&apos;m Leslie.
               </h1>
               <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 leading-snug">
               I bridge marketing strategy and AI-driven execution to build high-converting content experiences that drive business impact.
