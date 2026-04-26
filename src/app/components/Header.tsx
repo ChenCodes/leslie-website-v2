@@ -19,8 +19,8 @@ export default function Header() {
         <span className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
           Leslie Chen
         </span>
-        <span className="text-xs font-medium tracking-widest text-zinc-500 dark:text-zinc-400">
-          CONTENT DESIGNER
+        <span className="text-[10px] sm:text-xs font-medium tracking-wider sm:tracking-widest text-zinc-500 dark:text-zinc-400 max-w-[16rem] leading-tight sm:max-w-none">
+          CONTENT MARKETING STRATEGIST
         </span>
       </Link>
       <nav className="flex items-center gap-4 md:gap-8">

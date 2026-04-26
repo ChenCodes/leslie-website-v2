@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Leslie Chen | Content Designer",
-  description: "Leslie Chen - Content Designer",
+  title: "Leslie Chen | Content Marketing Strategist",
+  description: "Leslie Chen - Content Marketing Strategist",
 };
 
 export default function RootLayout({

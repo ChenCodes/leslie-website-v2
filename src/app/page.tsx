@@ -90,7 +90,7 @@ export default function Home() {
               <h1 className="relative inline-block mt-0 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight tracking-tight text-zinc-900 dark:text-zinc-50">
                 I&apos;m Leslie,{" "}
                 <span className="relative inline-block">
-                  a content designer.
+                  a content marketing strategist.
                   <MessageCircleCheck
                     className="absolute -top-3 -right-6 hero-icon-hover cursor-pointer"
                     size={28}
