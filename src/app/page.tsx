@@ -99,7 +99,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 leading-snug">
-                I design content that wins users over and drives business growth.
+              I bridge marketing strategy and AI-driven execution to build high-converting content experiences that drive business impact.
               </p>
             </div>
 
