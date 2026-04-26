@@ -7,7 +7,7 @@ import CaseByteCard from "./components/CaseByteCard";
 import type { CaseByteItem } from "./components/CaseByteCard";
 
 const experience = [
-  { year: "2024 - Present", company: "Meta (WhatsApp)", title: "Senior Content Designer" },
+  { year: "2024 - Present", company: "Meta (WhatsApp)", title: "Senior Content and Marketing Strategist" },
   { year: "2021", company: "Meta (WhatsApp)", title: "Content Designer" },
   { year: "2020", company: "Meta (Messenger)", title: "Content Strategist" },
 ];
