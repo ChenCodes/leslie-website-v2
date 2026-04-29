@@ -20,7 +20,7 @@ export default function Header() {
           Leslie Chen
         </span>
         <span className="text-[10px] sm:text-xs font-medium tracking-wider sm:tracking-widest text-zinc-500 dark:text-zinc-400 max-w-[16rem] leading-tight sm:max-w-none">
-          Content designer and strategist
+          Content Designer and Strategist
         </span>
       </Link>
       <nav className="flex items-center gap-4 md:gap-8">
