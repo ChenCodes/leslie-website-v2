@@ -91,7 +91,7 @@ export default function Home() {
                 I&apos;m Leslie.
               </h1>
               <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 leading-snug">
-              I bridge marketing strategy and AI-driven execution to build high-converting content experiences that drive business impact.
+              I build high-converting content experiences that drive business impact.
               </p>
             </div>
 
