@@ -53,7 +53,7 @@ const placeholderProjects: WorkProject[] = [
   },
   {
     name: "WhatsApp Polls",
-    project: "Designing a faster way to to make plans for millions",
+    project: "Designing a faster way to make plans for millions",
     slug: "whatsapp-polls",
     previewImage: "/work/whatsapp-polls/polls-thumbnail.png",
   },
