@@ -109,7 +109,7 @@ export default function MuseWhatsAppContent() {
         </li>
       </ul>
 
-      <h3 className="text-lg font-semibold mt-6 mb-2">CTA framework and hard rules</h3>
+      <h3 className="text-lg font-semibold mt-6 mb-2">CTA framework</h3>
       <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-4">
         <li>
           <strong>Primary entry point:</strong> Try Muse (incumbent
@@ -128,12 +128,6 @@ export default function MuseWhatsAppContent() {
           immediate, in-context message surfaces)
         </li>
       </ul>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-6">
-        <strong>Hard rule:</strong> Never use &ldquo;Get the app&rdquo; on
-        WhatsApp surfaces. Muse lives natively within WhatsApp; promoting an app
-        download introduces friction and misrepresents the in-app agent
-        experience.
-      </p>
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
