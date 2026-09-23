@@ -1,5 +1,7 @@
 import CaseStudyLayout from "@/app/components/case-study/CaseStudyLayout";
+import CaseStudyLock from "@/app/components/case-study/CaseStudyLock";
 import type { CaseStudySection } from "@/app/components/case-study/types";
+import { isCaseStudyLocked } from "@/lib/protectedCaseStudies";
 import WhatsAppPollsContent, { whatsappPollsSections } from "../content/WhatsAppPollsContent";
 import AICommunicationsPlaybookContent, {
   aiCommunicationsPlaybookSections,
@@ -13,6 +15,7 @@ import MetaAvatarsWhatsAppContent, {
 import GenAIWhatsAppCulturalCampaignsContent, {
   genAIWhatsAppCulturalCampaignSections,
 } from "../content/GenAIWhatsAppCulturalCampaignsContent";
+import MuseWhatsAppContent, { museWhatsAppSections } from "../content/MuseWhatsAppContent";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -25,6 +28,12 @@ const SLUG_CONTENT: Record<
     sections: CaseStudySection[];
   }
 > = {
+  "muse-whatsapp": {
+    projectName: "Driving Muse promotional content strategy across WhatsApp",
+    title: "",
+    Component: MuseWhatsAppContent,
+    sections: museWhatsAppSections,
+  },
   "whatsapp-polls": {
     projectName: "WhatsApp polls",
     title: "Designing a faster way to make plans for millions",
@@ -70,6 +79,14 @@ export default async function WorkDetailPage({ params }: Props) {
         .join(" ");
   const ContentComponent = entry?.Component;
   const sections = entry?.sections ?? [];
+
+  if (await isCaseStudyLocked(slug)) {
+    return (
+      <CaseStudyLayout title={title} backHref="/" backLabel="← Back to case studies">
+        <CaseStudyLock slug={slug} projectName={entry?.projectName ?? title} />
+      </CaseStudyLayout>
+    );
+  }
 
   return (
     <CaseStudyLayout

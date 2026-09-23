@@ -7,14 +7,23 @@ import CaseByteCard from "./components/CaseByteCard";
 import type { CaseByteItem } from "./components/CaseByteCard";
 
 const experience = [
-  { year: "2024 - Present", company: "Meta (WhatsApp)", title: "Senior Content Designer and Strategist" },
+  { year: "2026 - Present", company: "Meta (WhatsApp)", title: "Staff Content Designer" },
+  { year: "2024 - 2026", company: "Meta (WhatsApp)", title: "Senior Content Designer and Strategist" },
   { year: "2021", company: "Meta (WhatsApp)", title: "Content Designer" },
   { year: "2020", company: "Meta (Messenger)", title: "Content Strategist" },
 ];
 
 const placeholderProjects: WorkProject[] = [
   {
-    name: "Accelerating WhatsApp GenAI adoption with cultural campaigns",
+    name: "Driving Muse Promotional Content Strategy Across WhatsApp",
+    project: "Brand guardrails and context-aware promotion for a personal AI agent",
+    slug: "muse-whatsapp",
+    passwordProtected: true,
+    previewImage: "/work/muse-whatsapp/muse-announcement.png",
+    previewObjectPosition: "50% 78%",
+  },
+  {
+    name: "Accelerating WhatsApp GenAI Adoption with Cultural Campaigns",
     project: "Regional holidays, AI Content Studio, and global GenAI growth",
     slug: "whatsapp-genai-cultural-campaigns",
     previewImage:
@@ -26,7 +35,6 @@ const placeholderProjects: WorkProject[] = [
     project: "Bringing Meta Avatars to WhatsApp through a privacy lens",
     slug: "meta-avatars-whatsapp",
     passwordProtected: true,
-    password: "cdtime!",
     previewImage: "/work/meta-avatars-whatsapp/avatars-thumbnail.png",
   },
   {
@@ -34,19 +42,17 @@ const placeholderProjects: WorkProject[] = [
     project: "Driving awareness and early adoption",
     slug: "ai-stickers-whatsapp",
     passwordProtected: true,
-    password: "cdtime!",
     previewImage: "/work/ai-stickers-whatsapp/ai-stickers-thumbnail-2.jpg",
   },
   {
-    name: "AI communications playbook",
+    name: "AI Communications Playbook",
     project: "An org-wide framework for design consistency and faster decision making",
     slug: "ai-communications-playbook",
     passwordProtected: true,
-    password: "cdtime!",
     previewImage: "/work/ai-communications-playbook/decision-tree-thumbnail-2.png",
   },
   {
-    name: "WhatsApp polls",
+    name: "WhatsApp Polls",
     project: "Designing a faster way to to make plans for millions",
     slug: "whatsapp-polls",
     previewImage: "/work/whatsapp-polls/polls-thumbnail.png",
@@ -88,10 +94,10 @@ export default function Home() {
             {/* Left: Hero text */}
             <div className="lg:col-span-6 space-y-3">
               <h1 className="relative inline-block mt-0 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight tracking-tight text-zinc-900 dark:text-zinc-50">
-                I&apos;m Leslie.
+                I&apos;m Leslie, a staff content designer at Meta.
               </h1>
               <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 leading-snug">
-              I build high-converting content experiences that drive business impact.
+              I have 8+ years of experience leading high-converting content strategy, product growth, and user-centered design.
               </p>
             </div>
 

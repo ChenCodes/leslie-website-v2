@@ -16,7 +16,7 @@ type PasswordDialogProps = {
   open: boolean;
   onClose: () => void;
   projectName: string;
-  onSubmit: (password: string) => boolean;
+  onSubmit: (password: string) => boolean | Promise<boolean>;
 };
 
 export default function PasswordDialog({
@@ -26,17 +26,20 @@ export default function PasswordDialog({
   onSubmit,
 }: PasswordDialogProps) {
   const [error, setError] = useState("");
+  const [pending, setPending] = useState(false);
 
   useEffect(() => {
     if (open) setError("");
   }, [open]);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
     const form = e.currentTarget;
     const password = (form.elements.namedItem("password") as HTMLInputElement)?.value ?? "";
-    const success = onSubmit(password);
+    setPending(true);
+    const success = await onSubmit(password);
+    setPending(false);
     if (success) {
       form.reset();
       onClose();
@@ -90,7 +93,7 @@ export default function PasswordDialog({
             >
               Cancel
             </DialogClose>
-            <Button type="submit" size="lg" className="flex-1">View</Button>
+            <Button type="submit" size="lg" className="flex-1" disabled={pending}>View</Button>
           </DialogFooter>
         </form>
         

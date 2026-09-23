@@ -4,13 +4,13 @@ import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import PasswordDialog from "./PasswordDialog";
+import { unlockCaseStudy } from "@/app/work/actions";
 
 export type WorkProject = {
   name: string;
   project: string;
   slug: string;
   passwordProtected?: boolean;
-  password?: string;
   /** Preview image or GIF path (e.g. /work/whatsapp-polls/polls-lunch-club.png). Use a .gif file for animation. */
   previewImage?: string;
   /** Optional CSS object-position for better thumbnail cropping (e.g. "50% 25%"). */
@@ -34,13 +34,10 @@ export default function WorkCard({ project }: WorkCardProps) {
     }
   };
 
-  const handlePasswordSubmit = (password: string): boolean => {
-    const expected = project.password ?? "";
-    if (password === expected) {
-      router.push(`/work/${project.slug}`);
-      return true;
-    }
-    return false;
+  const handlePasswordSubmit = async (password: string): Promise<boolean> => {
+    const success = await unlockCaseStudy(project.slug, password);
+    if (success) router.push(`/work/${project.slug}`);
+    return success;
   };
 
   return (
