@@ -47,15 +47,6 @@ export default function MuseWhatsAppContent() {
         adapting surrounding language to feel native to every product context, I
         led the content strategy across all key WhatsApp touchpoints.
       </p>
-      <div className="my-6 max-w-full">
-        <Image
-          src="/work/muse-whatsapp/muse-already-on-it.jpg"
-          alt="Muse says &quot;Already on it...&quot; beneath task cards for a calendar, shopping, a reminder list marked complete, and a phone"
-          width={1170}
-          height={1124}
-          className="rounded-lg border border-zinc-200 dark:border-zinc-800 w-full max-w-xl h-auto"
-        />
-      </div>
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
@@ -128,6 +119,15 @@ export default function MuseWhatsAppContent() {
           immediate, in-context message surfaces)
         </li>
       </ul>
+      <div className="my-6 max-w-full">
+        <Image
+          src="/work/muse-whatsapp/muse-announcement.png"
+          alt="WhatsApp announcement message: New: Meet Muse, your personal AI agent, with a Try Muse button"
+          width={1179}
+          height={2556}
+          className="rounded-lg border border-zinc-200 dark:border-zinc-800 w-full max-w-sm h-auto"
+        />
+      </div>
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
