@@ -8,12 +8,32 @@ import type { CaseByteItem } from "./components/CaseByteCard";
 
 const placeholderProjects: WorkProject[] = [
   {
+    name: "WhatsApp Polls",
+    project: "Designing a faster way to make plans for millions",
+    slug: "whatsapp-polls",
+    previewImage: "/work/whatsapp-polls/polls-thumbnail.png",
+  },
+  {
+    name: "Introducing Meta Avatars to WhatsApp",
+    project: "Bringing Meta Avatars to WhatsApp through a privacy lens",
+    slug: "meta-avatars-whatsapp",
+    passwordProtected: true,
+    previewImage: "/work/meta-avatars-whatsapp/avatars-thumbnail.png",
+  },
+  {
     name: "Driving Muse Promotional Content Strategy Across WhatsApp",
     project: "Brand guardrails and context-aware promotion for a personal AI agent",
     slug: "muse-whatsapp",
     passwordProtected: true,
     previewImage: "/work/muse-whatsapp/muse-already-on-it.jpg",
     previewObjectPosition: "50% 78%",
+  },
+  {
+    name: "AI Stickers on WhatsApp",
+    project: "Driving awareness and early adoption",
+    slug: "ai-stickers-whatsapp",
+    passwordProtected: true,
+    previewImage: "/work/ai-stickers-whatsapp/ai-stickers-thumbnail-2.jpg",
   },
   {
     name: "Accelerating WhatsApp GenAI Adoption with Cultural Campaigns",
@@ -24,31 +44,11 @@ const placeholderProjects: WorkProject[] = [
     previewObjectPosition: "50% 42%",
   },
   {
-    name: "Introducing Meta Avatars to WhatsApp",
-    project: "Bringing Meta Avatars to WhatsApp through a privacy lens",
-    slug: "meta-avatars-whatsapp",
-    passwordProtected: true,
-    previewImage: "/work/meta-avatars-whatsapp/avatars-thumbnail.png",
-  },
-  {
-    name: "AI Stickers on WhatsApp",
-    project: "Driving awareness and early adoption",
-    slug: "ai-stickers-whatsapp",
-    passwordProtected: true,
-    previewImage: "/work/ai-stickers-whatsapp/ai-stickers-thumbnail-2.jpg",
-  },
-  {
     name: "AI Communications Playbook",
     project: "An org-wide framework for design consistency and faster decision making",
     slug: "ai-communications-playbook",
     passwordProtected: true,
     previewImage: "/work/ai-communications-playbook/decision-tree-thumbnail-2.png",
-  },
-  {
-    name: "WhatsApp Polls",
-    project: "Designing a faster way to make plans for millions",
-    slug: "whatsapp-polls",
-    previewImage: "/work/whatsapp-polls/polls-thumbnail.png",
   },
 ];
 
