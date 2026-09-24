@@ -6,6 +6,7 @@ export const museWhatsAppSections: CaseStudySection[] = [
   { id: "branding-framework", title: "Core branding framework and locked vocabulary" },
   { id: "contextual-promotion", title: "Contextually relevant promotion strategy" },
   { id: "testing-territories", title: "Data-backed testing and variant territories" },
+  { id: "capability-hierarchy", title: "Capability use cases and copy hierarchy" },
 ];
 
 const surfaces = [
@@ -38,15 +39,25 @@ export default function MuseWhatsAppContent() {
   return (
     <article>
       <h2 id="in-short" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">In short</h2>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-6">
-        As Content Design Lead for Mark Zuckerberg&apos;s Muse Tiger Team on
-        WhatsApp, I directed the end-to-end promotional strategy to drive
-        WhatsApp users toward discovering and adopting the native, in-app Muse
-        experience and personal agent capabilities. By establishing unified
-        brand guardrails, designing data-backed messaging frameworks, and
-        adapting surrounding language to feel native to every product context, I
-        led the content strategy across all key WhatsApp touchpoints.
-      </p>
+      <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
+        <li>
+          <strong>The context:</strong> Mark Zuckerberg wanted WhatsApp to fire
+          off promotions across the app that sent WhatsApp users to the
+          standalone Muse app, and each promotion needed to feel relevant to the
+          touchpoint where it appeared.
+        </li>
+        <li>
+          <strong>The solution:</strong> Unified brand guardrails, data-backed
+          messaging frameworks, and surrounding language adapted to feel native
+          to every product context.
+        </li>
+        <li>
+          <strong>My role:</strong> As Content Design Lead for Mark
+          Zuckerberg&apos;s Muse Tiger Team on WhatsApp, I directed the
+          end-to-end promotional content strategy across all key WhatsApp
+          touchpoints.
+        </li>
+      </ul>
 
       <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
 
@@ -237,6 +248,56 @@ export default function MuseWhatsAppContent() {
         <li>
           <strong>Students cohort:</strong> Focuses on task organization,
           research assistance, and study planning.
+        </li>
+      </ul>
+
+      <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
+
+      <h2 id="capability-hierarchy" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
+        Capability use cases and copy hierarchy
+      </h2>
+      <p className="text-zinc-600 dark:text-zinc-400 mb-4">
+        The updated capability hierarchy came directly from extensive variant
+        testing across Instagram and Facebook. Messaging centered on finding
+        deals, booking reservations or appointments, and managing your inbox
+        consistently outperformed other feature sets, so we used these top
+        variants as the foundation for our core copy hierarchy.
+      </p>
+
+      <h3 className="text-lg font-semibold mt-6 mb-2">Primary capability hierarchy (winning order)</h3>
+      <ol className="list-decimal pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-4">
+        <li>
+          <strong>Finding deals:</strong> Price comparisons, price-drop alerts,
+          and restock notifications.
+        </li>
+        <li>
+          <strong>Booking reservations:</strong> Tables, appointments, and
+          tickets.
+        </li>
+        <li>
+          <strong>Managing your inbox:</strong> Sorting, triaging, and surfacing
+          high-priority items.
+        </li>
+      </ol>
+
+      <h3 className="text-lg font-semibold mt-6 mb-2">Copy application rules</h3>
+      <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
+        <li>
+          <strong>Standard body copy:</strong> Body strings must lead with these
+          top three capabilities in this precise priority order, unless a
+          specific target cohort (e.g., Parents or Shoppers) calls for an
+          overlay override.
+        </li>
+        <li>
+          <strong>Action-oriented messaging:</strong> Copy must always use
+          concrete verbs.
+        </li>
+        <li>
+          <strong>Supporting tier:</strong> Secondary capabilities (such as
+          planning trips, calendars and reminders, canceling subscriptions, and
+          customizing Muse) remain in the supporting tier for longer surfaces or
+          cohort variants, and can&apos;t replace the top three without further
+          performance testing.
         </li>
       </ul>
     </article>
