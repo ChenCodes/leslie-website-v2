@@ -49,11 +49,11 @@ export default function MuseWhatsAppContent() {
       </p>
       <div className="my-6 max-w-full">
         <Image
-          src="/work/muse-whatsapp/muse-announcement.png"
-          alt="WhatsApp announcement message: New: Meet Muse, your personal AI agent, with a Try Muse button"
-          width={1179}
-          height={2556}
-          className="rounded-lg border border-zinc-200 dark:border-zinc-800 w-full max-w-sm h-auto"
+          src="/work/muse-whatsapp/muse-shopping.jpg"
+          alt="Let Muse do the shopping: Muse is comparing prices after a user says they like the pink softball helmet"
+          width={1029}
+          height={844}
+          className="rounded-lg border border-zinc-200 dark:border-zinc-800 w-full max-w-xl h-auto"
         />
       </div>
 

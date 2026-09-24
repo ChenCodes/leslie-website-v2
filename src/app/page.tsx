@@ -8,7 +8,7 @@ import type { CaseByteItem } from "./components/CaseByteCard";
 
 const experience = [
   { year: "2026 - Present", company: "Meta (WhatsApp)", title: "Staff Content Designer" },
-  { year: "2024 - 2026", company: "Meta (WhatsApp)", title: "Senior Content Designer and Strategist" },
+  { year: "2024", company: "Meta (WhatsApp)", title: "Senior Content Designer and Strategist" },
   { year: "2021", company: "Meta (WhatsApp)", title: "Content Designer" },
   { year: "2020", company: "Meta (Messenger)", title: "Content Strategist" },
 ];
@@ -19,7 +19,7 @@ const placeholderProjects: WorkProject[] = [
     project: "Brand guardrails and context-aware promotion for a personal AI agent",
     slug: "muse-whatsapp",
     passwordProtected: true,
-    previewImage: "/work/muse-whatsapp/muse-announcement.png",
+    previewImage: "/work/muse-whatsapp/muse-shopping.jpg",
     previewObjectPosition: "50% 78%",
   },
   {
