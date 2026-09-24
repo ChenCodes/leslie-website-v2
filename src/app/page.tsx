@@ -6,20 +6,13 @@ import type { WorkProject } from "./components/WorkCard";
 import CaseByteCard from "./components/CaseByteCard";
 import type { CaseByteItem } from "./components/CaseByteCard";
 
-const experience = [
-  { year: "2026 - Present", company: "Meta (WhatsApp)", title: "Staff Content Designer" },
-  { year: "2024", company: "Meta (WhatsApp)", title: "Senior Content Designer and Strategist" },
-  { year: "2021", company: "Meta (WhatsApp)", title: "Content Designer" },
-  { year: "2020", company: "Meta (Messenger)", title: "Content Strategist" },
-];
-
 const placeholderProjects: WorkProject[] = [
   {
     name: "Driving Muse Promotional Content Strategy Across WhatsApp",
     project: "Brand guardrails and context-aware promotion for a personal AI agent",
     slug: "muse-whatsapp",
     passwordProtected: true,
-    previewImage: "/work/muse-whatsapp/muse-shopping.jpg",
+    previewImage: "/work/muse-whatsapp/muse-already-on-it.jpg",
     previewObjectPosition: "50% 78%",
   },
   {
@@ -88,7 +81,7 @@ export default function Home() {
       <Header />
 
       <main className="flex-1 pt-24 md:pt-28 pb-16">
-        {/* Hero + Experience row */}
+        {/* Hero */}
         <section className="px-6 md:px-10 max-w-6xl mx-auto pt-16 md:pt-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left: Hero text */}
@@ -101,34 +94,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Right: Experience list - tabular layout with distinct columns */}
-            <div className="lg:col-span-4 min-w-0">
-              <div className="space-y-4 min-w-0 lg:min-w-[40rem] mt-3">
-                {experience.map((item) => (
-                  <div
-                    key={`${item.year}-${item.company}`}
-                    className="grid grid-cols-[5rem_7rem_20rem] gap-6 md:gap-10 items-baseline"
-                  >
-                    <span className="text-sm text-zinc-500 dark:text-zinc-400 tabular-nums text-left whitespace-nowrap">
-                      {item.year}
-                    </span>
-                    <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100 text-left whitespace-nowrap">
-                      Meta{" "}
-                      {item.company.includes("WhatsApp") ? (
-                        <span style={{ color: "#25D366" }}>(WhatsApp)</span>
-                      ) : item.company.includes("Messenger") ? (
-                        <span style={{ color: "#0866ff" }}>(Messenger)</span>
-                      ) : (
-                        item.company.replace(/^Meta\s*/, "")
-                      )}
-                    </span>
-                    <span className="text-sm text-zinc-500 dark:text-zinc-400 text-left whitespace-nowrap">
-                      {item.title}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </section>
 
