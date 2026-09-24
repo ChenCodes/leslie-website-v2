@@ -90,7 +90,7 @@ export default function Home() {
                 I&apos;m Leslie, a staff content designer at Meta.
               </h1>
               <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 leading-snug">
-              I have 8+ years of experience leading high-converting content strategy, product growth, and user-centered design.
+              I have 8+ years of experience leading high-converting content strategy and product growth.
               </p>
             </div>
 
