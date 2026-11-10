@@ -22,9 +22,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteTitle = "Leslie Lee Chen - Staff Content Designer";
+const siteDescription =
+  "Staff content designer leading high-converting content strategy for launches that reach billions of people and drive product growth.";
+
 export const metadata: Metadata = {
-  title: "Leslie Chen | Content Marketing Strategist",
-  description: "Leslie Chen - Content Marketing Strategist",
+  metadataBase: new URL("https://leslielchen.com"),
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: "/",
+    siteName: "Leslie Lee Chen",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: siteTitle,
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({
