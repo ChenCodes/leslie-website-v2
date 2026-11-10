@@ -15,7 +15,7 @@ const MESSENGER_PATH =
 
 function MetaMark() {
   return (
-    <svg viewBox="0 0 24 24" className="size-7" aria-hidden>
+    <svg viewBox="0 0 24 24" className="size-5 sm:size-6 xl:size-7" aria-hidden>
       <defs>
         <linearGradient id="meta-gradient" x1="0" y1="0.5" x2="1" y2="0.5">
           <stop offset="0" stopColor="#0064E1" />
@@ -29,7 +29,7 @@ function MetaMark() {
 
 function MetaAIMark() {
   return (
-    <svg viewBox="0 0 24 24" className="size-7" aria-hidden>
+    <svg viewBox="0 0 24 24" className="size-5 sm:size-6 xl:size-7" aria-hidden>
       <defs>
         <linearGradient id="meta-ai-gradient" x1="0" y1="1" x2="1" y2="0">
           <stop offset="0" stopColor="#0082FB" />
@@ -50,14 +50,14 @@ function MuseMark() {
       alt=""
       width={164}
       height={164}
-      className="size-7 rounded-full ring-1 ring-zinc-200 dark:ring-zinc-700"
+      className="size-5 sm:size-6 xl:size-7 rounded-full ring-1 ring-zinc-200 dark:ring-zinc-700"
     />
   );
 }
 
 function WhatsAppMark() {
   return (
-    <svg viewBox="0 0 24 24" className="size-7" aria-hidden>
+    <svg viewBox="0 0 24 24" className="size-5 sm:size-6 xl:size-7" aria-hidden>
       <path d={WHATSAPP_PATH} fill="#25D366" />
     </svg>
   );
@@ -65,7 +65,7 @@ function WhatsAppMark() {
 
 function MessengerMark() {
   return (
-    <svg viewBox="0 0 24 24" className="size-7" aria-hidden>
+    <svg viewBox="0 0 24 24" className="size-5 sm:size-6 xl:size-7" aria-hidden>
       <defs>
         <linearGradient id="messenger-gradient" x1="0.15" y1="1" x2="0.85" y2="0">
           <stop offset="0" stopColor="#0099FF" />
@@ -80,11 +80,11 @@ function MessengerMark() {
 }
 
 const companies = [
-  { name: "Meta AI", Mark: MetaAIMark },
-  { name: "Meta Central Products", Mark: MetaMark },
-  { name: "Messenger", Mark: MessengerMark },
-  { name: "Muse", Mark: MuseMark },
   { name: "WhatsApp", Mark: WhatsAppMark },
+  { name: "Muse", Mark: MuseMark },
+  { name: "Meta AI", Mark: MetaAIMark },
+  { name: "Messenger", Mark: MessengerMark },
+  { name: "Meta Central Products", Mark: MetaMark },
 ];
 
 export default function WorkedAt() {
@@ -93,20 +93,18 @@ export default function WorkedAt() {
       <p className="mb-5 text-xs font-medium uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
         I&apos;ve worked on
       </p>
-      {/* One line always: spread edge to edge, scrolls sideways on narrow screens. */}
-      <div className="-mx-6 overflow-x-auto px-6 [scrollbar-width:none] md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden">
-        <ul className="flex w-max min-w-full flex-nowrap items-center justify-between gap-10">
-          {companies.map(({ name, Mark }) => (
-            <li
-              key={name}
-              className="flex shrink-0 items-center gap-2.5 whitespace-nowrap text-base lg:text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-100"
-            >
-              <Mark />
-              {name}
-            </li>
-          ))}
-        </ul>
-      </div>
+      {/* Wraps to two lines on phones and tablets; one edge-to-edge line on wide screens. */}
+      <ul className="flex flex-wrap items-center gap-x-5 gap-y-3 sm:gap-x-8 lg:flex-nowrap lg:justify-between lg:gap-8">
+        {companies.map(({ name, Mark }) => (
+          <li
+            key={name}
+            className="flex shrink-0 items-center gap-2 whitespace-nowrap text-sm sm:text-base xl:text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-100"
+          >
+            <Mark />
+            {name}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
