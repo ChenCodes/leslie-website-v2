@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import WorkCard from "./components/WorkCard";
 import type { WorkProject } from "./components/WorkCard";
 import CaseByteCard from "./components/CaseByteCard";
+import WorkedAt from "./components/WorkedAt";
 import {
   AIStickersPreview,
   CulturalCampaignsPreview,
@@ -189,6 +190,7 @@ export default function Home() {
               </span>{" "}
               and drive product growth.
             </p>
+            <WorkedAt />
           </div>
           <WritingWithAIIllustration />
         </section>
