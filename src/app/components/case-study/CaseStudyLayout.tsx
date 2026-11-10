@@ -10,6 +10,8 @@ type CaseStudyLayoutProps = {
   backHref: string;
   backLabel: string;
   sections?: CaseStudySection[];
+  /** Optional custom header that replaces the default title. */
+  hero?: ReactNode;
   children: ReactNode;
 };
 
@@ -18,6 +20,7 @@ export default function CaseStudyLayout({
   backHref,
   backLabel,
   sections = [],
+  hero,
   children,
 }: CaseStudyLayoutProps) {
   return (
@@ -30,7 +33,7 @@ export default function CaseStudyLayout({
         >
           {backLabel}
         </Link>
-        <h1 className="text-2xl font-semibold mb-8">{title}</h1>
+        {hero ?? <h1 className="text-2xl font-semibold mb-8">{title}</h1>}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <section className="lg:col-span-8 min-w-0">{children}</section>
           <CaseStudyToc sections={sections} />

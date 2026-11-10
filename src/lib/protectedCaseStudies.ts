@@ -6,8 +6,6 @@ import { cookies } from "next/headers";
  */
 export const PROTECTED_CASE_STUDIES: Record<string, { password: string; lockPage?: boolean }> = {
   "muse-whatsapp": { password: "cdtime!", lockPage: true },
-  "meta-avatars-whatsapp": { password: "cdtime!", lockPage: true },
-  "ai-stickers-whatsapp": { password: "cdtime!", lockPage: true },
   "ai-communications-playbook": { password: "cdtime!", lockPage: true },
 };
 

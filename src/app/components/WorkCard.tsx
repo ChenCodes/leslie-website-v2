@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import PasswordDialog from "./PasswordDialog";
 import { unlockCaseStudy } from "@/app/work/actions";
@@ -15,6 +16,8 @@ export type WorkProject = {
   previewImage?: string;
   /** Optional CSS object-position for better thumbnail cropping (e.g. "50% 25%"). */
   previewObjectPosition?: string;
+  /** Composed thumbnail; takes precedence over `previewImage`. */
+  preview?: React.ReactNode;
 };
 
 type WorkCardProps = {
@@ -53,15 +56,17 @@ export default function WorkCard({ project }: WorkCardProps) {
             handleCardClick();
           }
         }}
-        className="group flex cursor-pointer flex-col overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 transition-colors hover:border-zinc-300 hover:bg-zinc-100 dark:hover:border-zinc-700 dark:hover:bg-zinc-800/50"
+        className="group flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 transition duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-900/5 dark:hover:border-emerald-500/30 focus-visible:outline-2 focus-visible:outline-emerald-500"
       >
         <div className="relative aspect-video bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center overflow-hidden">
-          {project.previewImage ? (
+          {project.preview ? (
+            project.preview
+          ) : project.previewImage ? (
             <Image
               src={project.previewImage}
               alt=""
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
               style={
                 project.previewObjectPosition
                   ? { objectPosition: project.previewObjectPosition }
@@ -74,21 +79,25 @@ export default function WorkCard({ project }: WorkCardProps) {
           )}
           {isProtected && (
             <span
-              className="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-700/90 text-white dark:bg-zinc-600/90"
+              className="absolute top-3 right-3 flex items-center gap-1.5 rounded-full bg-white/85 dark:bg-zinc-900/85 px-2.5 py-1 text-xs font-medium text-zinc-700 dark:text-zinc-200 shadow-sm backdrop-blur"
               title="Password protected"
-              aria-label="Password protected"
             >
-              <LockIcon className="h-4 w-4" />
+              <LockIcon className="h-3.5 w-3.5" />
+              Protected
             </span>
           )}
         </div>
-        <div className="p-4 md:p-5">
-          <h3 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-1">
+        <div className="flex flex-1 flex-col p-5 md:p-6">
+          <h3 className="text-lg font-semibold leading-snug text-zinc-900 dark:text-zinc-50 mb-1.5">
             {project.name}
           </h3>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-2">
+          <p className="text-sm text-zinc-500 dark:text-zinc-400">
             {project.project}
           </p>
+          <span className="mt-auto pt-5 inline-flex items-center gap-1.5 text-sm font-medium text-zinc-400 transition-colors group-hover:text-emerald-700 dark:group-hover:text-emerald-400">
+            View case study
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
+          </span>
         </div>
       </article>
 

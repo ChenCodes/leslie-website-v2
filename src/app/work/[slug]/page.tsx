@@ -2,7 +2,10 @@ import CaseStudyLayout from "@/app/components/case-study/CaseStudyLayout";
 import CaseStudyLock from "@/app/components/case-study/CaseStudyLock";
 import type { CaseStudySection } from "@/app/components/case-study/types";
 import { isCaseStudyLocked } from "@/lib/protectedCaseStudies";
-import WhatsAppPollsContent, { whatsappPollsSections } from "../content/WhatsAppPollsContent";
+import WhatsAppPollsContent, {
+  WhatsAppPollsHero,
+  whatsappPollsSections,
+} from "../content/WhatsAppPollsContent";
 import AICommunicationsPlaybookContent, {
   aiCommunicationsPlaybookSections,
 } from "../content/AICommunicationsPlaybookContent";
@@ -10,12 +13,16 @@ import AISickersWhatsAppContent, {
   aiStickersWhatsAppSections,
 } from "../content/AISickersWhatsAppContent";
 import MetaAvatarsWhatsAppContent, {
+  MetaAvatarsWhatsAppHero,
   metaAvatarsWhatsAppSections,
 } from "../content/MetaAvatarsWhatsAppContent";
 import GenAIWhatsAppCulturalCampaignsContent, {
   genAIWhatsAppCulturalCampaignSections,
 } from "../content/GenAIWhatsAppCulturalCampaignsContent";
-import MuseWhatsAppContent, { museWhatsAppSections } from "../content/MuseWhatsAppContent";
+import MuseWhatsAppContent, {
+  MuseWhatsAppHero,
+  museWhatsAppSections,
+} from "../content/MuseWhatsAppContent";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -25,19 +32,22 @@ const SLUG_CONTENT: Record<
     projectName: string;
     title: string;
     Component: () => React.JSX.Element;
+    Hero?: () => React.JSX.Element;
     sections: CaseStudySection[];
   }
 > = {
   "muse-whatsapp": {
-    projectName: "Driving Muse promotional content strategy across WhatsApp",
+    projectName: "Growing Muse on WhatsApp",
     title: "",
     Component: MuseWhatsAppContent,
+    Hero: MuseWhatsAppHero,
     sections: museWhatsAppSections,
   },
   "whatsapp-polls": {
     projectName: "WhatsApp polls",
     title: "Designing a faster way to make plans for millions",
     Component: WhatsAppPollsContent,
+    Hero: WhatsAppPollsHero,
     sections: whatsappPollsSections,
   },
   "ai-communications-playbook": {
@@ -56,6 +66,7 @@ const SLUG_CONTENT: Record<
     projectName: "Introducing Meta Avatars to WhatsApp",
     title: "",
     Component: MetaAvatarsWhatsAppContent,
+    Hero: MetaAvatarsWhatsAppHero,
     sections: metaAvatarsWhatsAppSections,
   },
   "whatsapp-genai-cultural-campaigns": {
@@ -78,6 +89,7 @@ export default async function WorkDetailPage({ params }: Props) {
         .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
         .join(" ");
   const ContentComponent = entry?.Component;
+  const HeroComponent = entry?.Hero;
   const sections = entry?.sections ?? [];
 
   if (await isCaseStudyLocked(slug)) {
@@ -94,6 +106,7 @@ export default async function WorkDetailPage({ params }: Props) {
       backHref="/"
       backLabel="← Back to case studies"
       sections={sections}
+      hero={HeroComponent ? <HeroComponent /> : undefined}
     >
         {ContentComponent ? (
           <ContentComponent />
