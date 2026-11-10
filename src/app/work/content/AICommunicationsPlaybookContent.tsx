@@ -1,263 +1,394 @@
-import Image from "next/image";
+import {
+  BellOff,
+  Building2,
+  ClipboardList,
+  Crosshair,
+  FileSearch,
+  GitBranch,
+  Layers,
+  LayoutGrid,
+  Megaphone,
+  MessagesSquare,
+  Puzzle,
+  Scale,
+  Search,
+  Sparkles,
+  Target,
+  Users,
+} from "lucide-react";
 import type { CaseStudySection } from "@/app/components/case-study/types";
+import {
+  Accent,
+  CaseStudyHero,
+  Chips,
+  Divider,
+  GoalPanel,
+  HeroAccent,
+  IconPoints,
+  InShortCard,
+  NumberedLabel,
+  Screen,
+  SectionHeading,
+  StatsPanel,
+  type IconPoint,
+} from "@/app/components/case-study/blocks";
 
 export const aiCommunicationsPlaybookSections: CaseStudySection[] = [
   { id: "in-short", title: "In short" },
-  { id: "challenges", title: "The challenges: Clutter, conflict, and missing designs" },
+  { id: "challenges", title: "The challenges" },
   { id: "solution", title: "The solution: A playbook for intentional design" },
   { id: "investigation", title: "The investigation: Auditing all existing comms" },
   { id: "strategy", title: "The strategy: Silence as the default" },
-  { id: "principles", title: "The three principles of the playbook" },
+  { id: "principles", title: "The three principles" },
   { id: "deliverables", title: "Main deliverables" },
-  { id: "review-process", title: "A rigorous review process" },
-  { id: "buy-in", title: "Getting buy-in and executive enforcement" },
+  { id: "review-process", title: "Review and buy-in" },
   { id: "bottom-line", title: "The bottom line" },
 ];
+
+const challengePoints: IconPoint[] = [
+  {
+    Icon: Layers,
+    label: "Cluttered experience and drop-off",
+    text: "Message volume led to user frustration and abandonment.",
+  },
+  {
+    Icon: MessagesSquare,
+    label: "Repetitive team arguments",
+    text: "Debates over messaging components and frequency produced inconsistent experiences.",
+  },
+  {
+    Icon: Puzzle,
+    label: "Missing frameworks and components",
+    text: "There was no basic framework, and no design library components for new AI messages.",
+  },
+];
+
+const auditPoints: IconPoint[] = [
+  {
+    Icon: Search,
+    label: "Building the foundation",
+    text: "I reviewed designs for AI image generation, private chat experiences, and core AI tools to note which components worked best for which messages.",
+  },
+  {
+    Icon: FileSearch,
+    label: "Spotting inconsistencies",
+    text: "Different teams were often creating custom UI treatments for the exact same type of privacy disclosure.",
+  },
+];
+
+const silencePoints: IconPoint[] = [
+  {
+    Icon: Users,
+    label: "Global app surveys",
+    text: "People valued WhatsApp specifically for its lack of clutter.",
+  },
+  {
+    Icon: Target,
+    label: "Feature-specific UXR deep dives",
+    text: "People said they felt interrupted by new AI prompts when they were just trying to send a message.",
+    quotes: ["Interrupted"],
+  },
+  {
+    Icon: Building2,
+    label: "Internal feedback",
+    text: "Even our employees flagged that the app was starting to feel noisy.",
+    quotes: ["Noisy"],
+  },
+];
+
+const principles = [
+  {
+    title: "Be rigorously simple",
+    text: "Only interrupt people if their safety or success depends on it. If a message doesn't help them complete a task or protect their data, it doesn't belong on screen.",
+  },
+  {
+    title: "Be relevant",
+    text: "Deliver information exactly when it's useful, never sooner. We replaced general announcements with moment-based triggers.",
+  },
+  {
+    title: "Be transparent",
+    text: "Build trust by being bold and clear about how AI data is used. Transparency isn't legal fine print; it's making sure people feel in control.",
+  },
+];
+
+const reviewPoints: IconPoint[] = [
+  {
+    Icon: Scale,
+    label: "Cross-functional alignment",
+    text: "Legal and marketing confirmed the in-app rules complied with privacy regulations, and go-to-market teams made sure in-app messaging felt like a seamless extension of our external brand.",
+  },
+  {
+    Icon: Crosshair,
+    label: "Expert stress-testing",
+    text: "I presented the playbook to every lead product and content designer in the AI org, so the rules held up across surfaces from AI image generation to complex agentic experiences.",
+  },
+];
+
+const bottomLineStats = [
+  { value: "Zero", label: "decision time: no more “Groundhog Day” meetings, just instant alignment" },
+  { value: "1", label: "unified library with AI-specific components for every new scenario" },
+  { value: "2B+", label: "people who see only what's necessary" },
+];
+
+function PlaybookIllustration() {
+  return (
+    <svg viewBox="0 0 240 200" className="w-full h-auto" aria-hidden>
+      {/* Branches */}
+      <path
+        d="M120 64v14M120 78c0 10-54 6-54 20M120 78c0 10 54 6 54 20M66 122c0 10-24 6-24 18M66 122c0 10 24 6 24 18M174 122c0 10-24 6-24 18M174 122c0 10 24 6 24 18"
+        fill="none"
+        stroke="#18181b"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      {/* Gatekeeper question */}
+      <rect x="62" y="30" width="116" height="34" rx="17" fill="#ffffff" stroke="#18181b" strokeWidth="3" />
+      <path d="M88 47h50" stroke="#18181b" strokeWidth="4" strokeLinecap="round" />
+      <circle cx="152" cy="47" r="6" className="fill-emerald-500" stroke="#18181b" strokeWidth="2" />
+      {/* Questions */}
+      <rect x="36" y="98" width="60" height="24" rx="8" className="fill-emerald-200" stroke="#18181b" strokeWidth="3" />
+      <rect x="144" y="98" width="60" height="24" rx="8" className="fill-emerald-200" stroke="#18181b" strokeWidth="3" />
+      {/* Components */}
+      {[30, 78, 138, 186].map((x) => (
+        <rect key={x} x={x} y="140" width="24" height="24" rx="12" fill="#faf5ec" stroke="#18181b" strokeWidth="3" />
+      ))}
+      {/* Sparkle */}
+      <path
+        d="M206 20c2 10 5 13 15 15-10 2-13 5-15 15-2-10-5-13-15-15 10-2 13-5 15-15z"
+        className="fill-emerald-500"
+        stroke="#18181b"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+const heroTags = [
+  { Icon: BellOff, label: "Silence by default", className: "left-0 top-0" },
+  { Icon: GitBranch, label: "Decision tree", className: "right-0 top-1/2 -translate-y-1/2" },
+  { Icon: LayoutGrid, label: "Component library", className: "left-2 -bottom-2" },
+];
+
+export function AICommunicationsPlaybookHero() {
+  return (
+    <CaseStudyHero
+      eyebrow="Case study · WhatsApp"
+      title={
+        <>
+          AI communications <HeroAccent>playbook</HeroAccent>
+        </>
+      }
+      subtitle="An org-wide framework for design consistency and faster decision making."
+      tags={["Framework owner", "Meta AI on WhatsApp", "2B+ users"]}
+      illustration={<PlaybookIllustration />}
+      floatingTags={heroTags}
+    />
+  );
+}
 
 export default function AICommunicationsPlaybookContent() {
   return (
     <article>
-      <h2 id="in-short" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">In short</h2>
-      <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
-        <li>
-          <strong>The problems:</strong> Too many Meta AI feature messages were
-          cluttering WhatsApp, and the AI teams who owned them were stuck in
-          repetitive debates about which alerts users needed and how to design
-          them.
-        </li>
-        <li>
-          <strong>The solution:</strong> I built a reusable communications
-          playbook with a logic-based decision tree to automate how and when we
-          message users.
-        </li>
-        <li>
-          <strong>My role:</strong> I led the Figma-wide audit of AI promotions,
-          established the principles and guardrails, and secured global alignment
-          from design, legal, marketing, and go-to-market leads.
-        </li>
-        <li>
-          <strong>Impact:</strong> I eliminated wasted discussion time for Meta
-          AI teams and kept the app clean and simple for over 2 billion users.
-        </li>
-      </ul>
+      <SectionHeading id="in-short">In short</SectionHeading>
+      <div className="grid gap-4 sm:grid-cols-2 mb-6">
+        <InShortCard label="The problems">
+          <p className="text-zinc-700 dark:text-zinc-300">
+            Too many Meta AI feature messages cluttered WhatsApp, and the teams
+            who owned them were stuck in repetitive debates about which alerts
+            people needed and how to design them.
+          </p>
+        </InShortCard>
+        <InShortCard label="The solution">
+          <p className="text-zinc-700 dark:text-zinc-300">
+            A reusable communications playbook with a logic-based decision tree
+            that settles how and when we message people.
+          </p>
+        </InShortCard>
+        <InShortCard label="My role">
+          <p className="text-zinc-700 dark:text-zinc-300">
+            I led the Figma-wide audit of AI promotions, set the principles and
+            guardrails, and secured global alignment from design, legal,
+            marketing, and go-to-market leads.
+          </p>
+        </InShortCard>
+        <InShortCard label="The impact">
+          <p className="text-4xl font-semibold tracking-tight text-emerald-700 dark:text-emerald-400">
+            2B+
+          </p>
+          <p className="mt-1 text-zinc-700 dark:text-zinc-300">
+            people kept in a clean, simple app, with no more wasted discussion
+            time for Meta AI teams.
+          </p>
+        </InShortCard>
+      </div>
 
-      <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
+      <Divider />
 
-      <h2 id="challenges" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
-        The challenges: Clutter, conflict, and missing designs
-      </h2>
-      <ol className="list-decimal pl-6 space-y-4 text-zinc-600 dark:text-zinc-400 mb-6">
-        <li>
-          <strong>Cluttered experience and user drop-off:</strong> Message volume
-          led to user frustration and abandonment.
-        </li>
-        <li>
-          <strong>Repetitive team arguments:</strong> Inconsistent experiences
-          resulted from debates over messaging components and frequency.
-        </li>
-        <li>
-          <strong>Missing frameworks and components:</strong> There was no basic
-          framework or design library components for new AI-related messages.
-        </li>
-      </ol>
-
-      <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
-
-      <h2 id="solution" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
-        The solution: A playbook for intentional design
-      </h2>
+      <SectionHeading id="challenges">The challenges</SectionHeading>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
-        The aim of the playbook was to empower teams to make instant, principled
-        decisions, reduce meeting time, and ensure messages are predictable,
-        transparent, and necessary.
+        Clutter, conflict, and missing designs.
       </p>
+      <IconPoints points={challengePoints} />
 
-      <h2 id="investigation" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
-        The investigation: Auditing all existing comms
-      </h2>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-        To create baseline rules and keep what was working, I audited Figma libraries and hundreds of design files.
+      <Divider />
+
+      <SectionHeading id="solution">The solution: A playbook for intentional design</SectionHeading>
+      <GoalPanel
+        Icon={Target}
+        headline={
+          <>
+            Empower teams to make <Accent>instant, principled</Accent> decisions.
+          </>
+        }
+      >
+        Reduce meeting time, and make sure every message is:
+      </GoalPanel>
+      <Chips items={["Predictable", "Transparent", "Necessary"]} />
+
+      <Divider />
+
+      <SectionHeading id="investigation">The investigation: Auditing all existing comms</SectionHeading>
+      <p className="text-zinc-600 dark:text-zinc-400 mb-6">
+        To set baseline rules and keep what was working, I audited Figma
+        libraries and hundreds of design files.
       </p>
-      <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
-        <li>
-          <strong>Building the foundation:</strong> I looked at designs for AI
-          image generation, private chat experiences, and core AI tools to note
-          which components worked best for specific messaging.
-        </li>
-        <li>
-          <strong>Spotting inconsistencies:</strong> The audit confirmed that
-          different teams were often creating different, custom UI treatments for
-          the exact same type of privacy disclosure.
-        </li>
-      </ul>
+      <IconPoints points={auditPoints} />
 
-      <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
+      <Divider />
 
-      <h2 id="strategy" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
-        The strategy: &ldquo;Silence as the default&rdquo;
-      </h2>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-        We adopted a new core philosophy: only message when it truly matters.
-      </p>
+      <SectionHeading id="strategy">The strategy: Silence as the default</SectionHeading>
+      <GoalPanel
+        Icon={BellOff}
+        eyebrow="Our core philosophy"
+        headline={
+          <>
+            Only message when it <Accent>truly matters</Accent>.
+          </>
+        }
+      >
+        Too many messages dilute impact and make it harder to hold attention
+        when it counts.
+      </GoalPanel>
       <h3 className="text-lg font-semibold mt-6 mb-2">Rationale for silence</h3>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-        This shift was data-driven, referencing performance metrics for group
-        notifications. The &ldquo;signal of disturbance&rdquo; was a recurring
-        theme across three layers of feedback:
-      </p>
-      <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-4">
-        <li>
-          <strong>Global app surveys:</strong> High-level sentiment showed users
-          valued WhatsApp specifically for its lack of clutter.
-        </li>
-        <li>
-          <strong>Feature-specific UXR deep dives:</strong> Users explicitly
-          stated they felt &ldquo;interrupted&rdquo; by new AI prompts when they
-          were just trying to send a message.
-        </li>
-        <li>
-          <strong>Internal feedback:</strong> Even our employees flagged that the
-          app was beginning to feel &ldquo;noisy.&rdquo;
-        </li>
-      </ul>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
-        Too many messages diluted impact and made it harder to maintain user
-        attention when it mattered.
+        The shift was data-driven, drawing on performance metrics for group
+        notifications. A &ldquo;signal of disturbance&rdquo; recurred across
+        three layers of feedback:
       </p>
+      <IconPoints points={silencePoints} />
 
-      <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
+      <Divider />
 
-      <h2 id="principles" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
-        The three principles of the playbook
-      </h2>
-      <ol className="list-decimal pl-6 space-y-4 text-zinc-600 dark:text-zinc-400 mb-6">
-        <li>
-          <strong>Be rigorously simple:</strong> Only interrupt the user if their
-          safety or success depends on it. If a message doesn&apos;t help a user
-          complete their task or protect their data, it doesn&apos;t belong on
-          the screen.
-        </li>
-        <li>
-          <strong>Be relevant:</strong> Deliver information exactly when
-          it&apos;s useful—never sooner. We replaced general announcements with
-          &ldquo;moment-based&rdquo; triggers.
-        </li>
-        <li>
-          <strong>Be transparent:</strong> Build trust by being bold and clear
-          about how AI data is used. Transparency isn&apos;t about legal fine
-          print; it&apos;s about ensuring the user feels in control.
-        </li>
-      </ol>
-
-      <h2 id="deliverables" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Main deliverables</h2>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-        I developed three primary tools to transform our workflow from subjective
-        debate to standardized execution.
-      </p>
-      <ol className="list-decimal pl-6 space-y-4 text-zinc-600 dark:text-zinc-400 mb-4">
-        <li>
-          <strong>The decision tree: Real-world guidance.</strong> The centerpiece
-          of the playbook is a logic-based decision tree. It provides immediately
-          applicable guidance for real-world decision points. When a team is
-          stuck choosing between components that serve similar functions, the
-          tree adds structure and context. Crucially, it starts with a
-          &ldquo;gatekeeper&rdquo; question: &ldquo;Do we really need to bother
-          the user at all?&rdquo;
-          <div className="mt-4 mb-2 max-w-full">
-            <Image
-              src="/work/ai-communications-playbook/decision-tree.png"
-              alt="Flow chart for when to show or hide information: gatekeeper question on user safety and control, branching to intro bottom sheet, tooltip, mid card, system message, or rely on the design"
-              width={900}
-              height={500}
-              className="rounded-lg border border-zinc-200 dark:border-zinc-800 w-full h-auto"
-            />
+      <SectionHeading id="principles">The three principles</SectionHeading>
+      <div className="space-y-6">
+        {principles.map((principle, i) => (
+          <div key={principle.title}>
+            <NumberedLabel index={i + 1} part="Principle" title={principle.title} size="lg" />
+            <p className="pl-11 text-zinc-600 dark:text-zinc-400">{principle.text}</p>
           </div>
-        </li>
-        <li>
-          <strong>The roles and responsibilities chart: The strategic overview.</strong>{" "}
-          This chart provides the configuration. It is a broad, simple overview
-          that maps specific message types—such as privacy disclosures, new
-          feature releases, and educational tips—to their approved design
-          treatments.
-          <div className="mt-4 mb-2 max-w-full">
-            <Image
-              src="/work/ai-communications-playbook/roles-responsibilities-chart.png"
-              alt="Roles &amp; Responsibilities for User Messaging: system message, bottom sheet, in-line text, tooltip, and mid-card with goals, use cases, and examples"
-              width={800}
-              height={600}
-              className="rounded-lg border border-zinc-200 dark:border-zinc-800 w-full h-auto"
-            />
-          </div>
-        </li>
-        <li>
-          <strong>&ldquo;In the wild&rdquo; gallery: Proven success.</strong> To
-          move the playbook from theory to reality, I provided high-fidelity
-          examples of each design treatment working in production. By showcasing
-          these components in their intended context, I proved they were
-          effective solutions already successfully serving users.
-        </li>
-      </ol>
+        ))}
+      </div>
 
-      <hr className="border-zinc-200 dark:border-zinc-800 my-8" />
+      <Divider />
 
-      <h2 id="review-process" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
-        A rigorous review process
-      </h2>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-        I put these deliverables through a rigorous review process to ensure the
-        playbook resonated with all AI teams at WhatsApp and would hold up under
-        the pressure of a global launch.
-      </p>
-      <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
-        <li>
-          <strong>Cross-functional alignment:</strong> I ran the framework by
-          legal and marketing teams to ensure in-app rules complied with privacy
-          regulations. I also collaborated with go-to-market (GTM) teams to
-          ensure in-app messaging felt like a seamless extension of our external
-          brand.
-        </li>
-        <li>
-          <strong>Expert stress-testing:</strong> I presented the playbook to
-          every lead product and content designer across the AI organization. I
-          ensured these rules worked across vastly different surfaces, from AI
-          image generation to complex agentic experiences.
-        </li>
-      </ul>
-
-      <h2 id="buy-in" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
-        Getting buy-in and executive enforcement
-      </h2>
+      <SectionHeading id="deliverables">Main deliverables</SectionHeading>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
-        A playbook is only as strong as the people who follow it. Once the
-        reviews were finalized and I published the playbook as a Google Slides
-        deck, my director and I requested that all design and product executives
-        point their reports to it. It became the official source of truth for
-        all future in-app communication decisions for AI features at WhatsApp.
+        Three tools moved our workflow from subjective debate to standardized
+        execution.
       </p>
 
-      <h2 id="bottom-line" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">The bottom line</h2>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-        The AI in-app comms playbook became the ultimate guardrail against noise
-        and a way to circumvent wasting time on repetitive discussions.
+      <div className="mt-6">
+        <NumberedLabel index={1} part="Real-world guidance" title="The decision tree" size="lg" />
+        <p className="text-zinc-600 dark:text-zinc-400 mb-6">
+          The centerpiece of the playbook. When a team is stuck choosing between
+          components that serve similar functions, the tree adds structure and
+          context for real-world decisions.
+        </p>
+        <GoalPanel
+          Icon={Sparkles}
+          eyebrow="The gatekeeper question"
+          subtle
+          headline={
+            <>
+              &ldquo;Do we really need to <Accent>bother the user</Accent> at
+              all?&rdquo;
+            </>
+          }
+        />
+        <div className="mb-8">
+          <Screen
+            src="/work/ai-communications-playbook/decision-tree.png"
+            alt="Flow chart for when to show or hide information: gatekeeper question on user safety and control, branching to intro bottom sheet, tooltip, mid card, system message, or rely on the design"
+            width={1024}
+            height={682}
+          />
+        </div>
+      </div>
+
+      <div className="mt-10">
+        <NumberedLabel index={2} part="The strategic overview" title="The roles and responsibilities chart" size="lg" />
+        <p className="text-zinc-600 dark:text-zinc-400 mb-6">
+          A broad, simple overview that maps message types, like privacy
+          disclosures, new feature releases, and educational tips, to their
+          approved design treatments.
+        </p>
+        <div className="mb-8">
+          <Screen
+            src="/work/ai-communications-playbook/roles-responsibilities-chart.png"
+            alt="Roles & Responsibilities for User Messaging: system message, bottom sheet, in-line text, tooltip, and mid-card with goals, use cases, and examples"
+            width={1024}
+            height={682}
+          />
+        </div>
+      </div>
+
+      <div className="mt-10">
+        <NumberedLabel index={3} part="Proven success" title="The “In the wild” gallery" size="lg" />
+        <p className="text-zinc-600 dark:text-zinc-400 mb-6">
+          High-fidelity examples of each treatment working in production. Seeing
+          components in their intended context proved they were already
+          successfully serving users, moving the playbook from theory to
+          reality.
+        </p>
+      </div>
+
+      <Divider />
+
+      <SectionHeading id="review-process">Review and buy-in</SectionHeading>
+      <p className="text-zinc-600 dark:text-zinc-400 mb-6">
+        I put the deliverables through a rigorous review so the playbook
+        resonated with every AI team at WhatsApp and would hold up under a
+        global launch.
       </p>
-      <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
-        <li>
-          <strong>Zero decision time:</strong> We ended the &ldquo;Groundhog
-          Day&rdquo; cycle of repetitive meetings. Teams now move from concept
-          to launch with instant alignment.
-        </li>
-        <li>
-          <strong>A unified library:</strong> We successfully integrated new
-          AI-specific components into our design library, ensuring every team
-          had a prescribed treatment for new scenarios.
-        </li>
-        <li>
-          <strong>Protected user peace:</strong> By systematizing our
-          communication, we ensured users see only what is necessary,
-          preserving the simple experience that makes WhatsApp a world-leading
-          tool.
-        </li>
-      </ul>
+      <IconPoints points={reviewPoints} />
+      <div className="mt-8">
+        <GoalPanel
+          Icon={Megaphone}
+          eyebrow="Executive enforcement"
+          headline={
+            <>
+              The official <Accent>source of truth</Accent> for AI in-app
+              communication at WhatsApp.
+            </>
+          }
+        >
+          A playbook is only as strong as the people who follow it. Once I
+          published it as a Google Slides deck, my director and I asked every
+          design and product executive to point their reports to it.
+        </GoalPanel>
+      </div>
+
+      <Divider />
+
+      <SectionHeading id="bottom-line">The bottom line</SectionHeading>
+      <StatsPanel Icon={ClipboardList} eyebrow="The guardrail against noise" stats={bottomLineStats}>
+        <p className="text-sm text-zinc-400">
+          The playbook ended repetitive discussions, gave every team a
+          prescribed treatment for new scenarios, and preserved the simple
+          experience that makes WhatsApp a world-leading tool.
+        </p>
+      </StatsPanel>
     </article>
   );
 }

@@ -6,6 +6,8 @@ import CaseByteCard from "./components/CaseByteCard";
 import {
   AIStickersPreview,
   CulturalCampaignsPreview,
+  MusePreview,
+  PlaybookPreview,
   PollsPreview,
 } from "./components/ThumbnailPreviews";
 import type { CaseByteItem } from "./components/CaseByteCard";
@@ -17,6 +19,7 @@ const placeholderProjects: WorkProject[] = [
     slug: "muse-whatsapp",
     passwordProtected: true,
     previewImage: "/work/muse-whatsapp/muse-already-on-it.jpg",
+    preview: <MusePreview />,
     previewObjectPosition: "50% 78%",
   },
   {
@@ -40,7 +43,7 @@ const placeholderProjects: WorkProject[] = [
     preview: <AIStickersPreview />,
   },
   {
-    name: "Accelerating WhatsApp GenAI Adoption with Cultural Campaigns",
+    name: "Driving GenAI Adoption with Cultural Campaigns",
     project: "Regional holidays, AI Content Studio, and global GenAI growth",
     slug: "whatsapp-genai-cultural-campaigns",
     previewImage:
@@ -54,6 +57,7 @@ const placeholderProjects: WorkProject[] = [
     slug: "ai-communications-playbook",
     passwordProtected: true,
     previewImage: "/work/ai-communications-playbook/decision-tree-thumbnail-2.png",
+    preview: <PlaybookPreview />,
   },
 ];
 

@@ -7,9 +7,11 @@ import WhatsAppPollsContent, {
   whatsappPollsSections,
 } from "../content/WhatsAppPollsContent";
 import AICommunicationsPlaybookContent, {
+  AICommunicationsPlaybookHero,
   aiCommunicationsPlaybookSections,
 } from "../content/AICommunicationsPlaybookContent";
 import AISickersWhatsAppContent, {
+  AIStickersWhatsAppHero,
   aiStickersWhatsAppSections,
 } from "../content/AISickersWhatsAppContent";
 import MetaAvatarsWhatsAppContent, {
@@ -17,6 +19,7 @@ import MetaAvatarsWhatsAppContent, {
   metaAvatarsWhatsAppSections,
 } from "../content/MetaAvatarsWhatsAppContent";
 import GenAIWhatsAppCulturalCampaignsContent, {
+  GenAICulturalCampaignsHero,
   genAIWhatsAppCulturalCampaignSections,
 } from "../content/GenAIWhatsAppCulturalCampaignsContent";
 import MuseWhatsAppContent, {
@@ -54,12 +57,14 @@ const SLUG_CONTENT: Record<
     projectName: "AI communications playbook",
     title: "An org-wide framework for design consistency and faster decision making",
     Component: AICommunicationsPlaybookContent,
+    Hero: AICommunicationsPlaybookHero,
     sections: aiCommunicationsPlaybookSections,
   },
   "ai-stickers-whatsapp": {
     projectName: "Launching AI Stickers on WhatsApp",
     title: "Driving Awareness and Early Adoption",
     Component: AISickersWhatsAppContent,
+    Hero: AIStickersWhatsAppHero,
     sections: aiStickersWhatsAppSections,
   },
   "meta-avatars-whatsapp": {
@@ -70,9 +75,10 @@ const SLUG_CONTENT: Record<
     sections: metaAvatarsWhatsAppSections,
   },
   "whatsapp-genai-cultural-campaigns": {
-    projectName: "Accelerating WhatsApp GenAI adoption with cultural campaigns",
+    projectName: "Driving GenAI adoption with cultural campaigns",
     title: "",
     Component: GenAIWhatsAppCulturalCampaignsContent,
+    Hero: GenAICulturalCampaignsHero,
     sections: genAIWhatsAppCulturalCampaignSections,
   },
 };

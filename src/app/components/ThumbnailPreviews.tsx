@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Sparkles } from "lucide-react";
+import { Check, Sparkles } from "lucide-react";
 
 /**
  * Composed card thumbnails built from each case study's own imagery.
@@ -148,6 +148,128 @@ export function CulturalCampaignsPreview() {
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+const museTasks = [
+  { src: "/work/muse-whatsapp/thumb-calendar.png", className: "w-[12%] -rotate-8 translate-y-[12%]" },
+  { src: "/work/muse-whatsapp/thumb-notepad.png", className: "w-[15%] z-10", done: true },
+  { src: "/work/muse-whatsapp/thumb-phone.png", className: "w-[12%] rotate-8 translate-y-[12%]" },
+];
+
+export function MusePreview() {
+  return (
+    <div className="absolute inset-0 bg-linear-to-br from-indigo-500 via-blue-600 to-violet-700">
+      <div
+        className="absolute left-1/2 top-[38%] size-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/25 blur-3xl"
+        aria-hidden
+      />
+      <div className={`absolute inset-0 ${lift}`}>
+        {/* Task tiles, cut from the original "Already on it" image */}
+        <div className="absolute inset-x-0 top-[9%] flex items-start justify-center gap-[3%]">
+          {museTasks.map((task) => (
+            <div key={task.src} className={`relative ${task.className}`}>
+              <div className="overflow-hidden rounded-xl shadow-lg shadow-indigo-950/40 ring-2 ring-white/90">
+                <Image src={task.src} alt="" width={210} height={210} className="w-full h-auto" />
+              </div>
+              {task.done && (
+                <span className="absolute -bottom-1.5 -right-1.5 flex size-4.5 items-center justify-center rounded-full bg-emerald-500 text-white shadow-md ring-2 ring-white">
+                  <Check className="size-2.5" strokeWidth={3.5} aria-hidden />
+                </span>
+              )}
+            </div>
+          ))}
+        </div>
+        {/* Muse saying it's on the task */}
+        <div className="absolute inset-x-0 bottom-[8%] flex items-center justify-center">
+          <Image
+            src="/work/muse-whatsapp/thumb-avatar.png"
+            alt=""
+            width={164}
+            height={164}
+            className="relative z-10 size-20 rounded-full shadow-xl shadow-indigo-950/40 ring-4 ring-white"
+          />
+          <span className="-ml-4 rounded-full bg-white py-2 pl-6 pr-4 text-sm font-semibold text-zinc-900 shadow-lg">
+            Already on it&hellip;
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const playbookLeaves = [
+  { x: 6, label: "Bottom sheet" },
+  { x: 84, label: "Tooltip" },
+  { x: 162, label: "Mid card" },
+  { x: 240, label: "System msg" },
+];
+
+const playbookAnswers = [
+  { x: 58, label: "Yes" },
+  { x: 110, label: "No" },
+  { x: 214, label: "Yes" },
+  { x: 262, label: "No" },
+];
+
+export function PlaybookPreview() {
+  return (
+    <div className="absolute inset-0 bg-zinc-950">
+      <div
+        className="absolute inset-0 opacity-[0.07] bg-[linear-gradient(white_1px,transparent_1px),linear-gradient(90deg,white_1px,transparent_1px)] bg-size-[18px_18px]"
+        aria-hidden
+      />
+      <div className="absolute -top-20 left-1/2 size-64 -translate-x-1/2 rounded-full bg-emerald-500/25 blur-3xl" aria-hidden />
+      {/* Simplified version of the playbook's decision tree */}
+      <svg viewBox="0 0 320 180" className={`absolute inset-0 h-full w-full ${lift}`} aria-hidden>
+        <g fill="none" stroke="#34d399" strokeOpacity="0.55" strokeWidth="1.5">
+          <path d="M160 42c0 12-75 8-75 22M160 42c0 12 75 8 75 22" />
+          <path d="M85 88c0 14-42 10-42 28M85 88c0 14 36 10 36 28" />
+          <path d="M235 88c0 14-36 10-36 28M235 88c0 14 42 10 42 28" />
+        </g>
+        <rect x="70" y="16" width="180" height="26" rx="13" fill="#ffffff" />
+        <text x="160" y="33" textAnchor="middle" fontSize="11" fontWeight="600" fill="#18181b">
+          Safety or trust risk?
+        </text>
+        <g fontSize="10" fontWeight="500" textAnchor="middle">
+          <rect x="30" y="64" width="110" height="24" rx="8" fill="#064e3b" stroke="#34d399" strokeOpacity="0.6" />
+          <text x="85" y="80" fill="#ecfdf5">Sensitive info?</text>
+          <rect x="180" y="64" width="110" height="24" rx="8" fill="#064e3b" stroke="#34d399" strokeOpacity="0.6" />
+          <text x="235" y="80" fill="#ecfdf5">Broken experience?</text>
+        </g>
+        <g fontSize="8" fontWeight="700" textAnchor="middle">
+          {playbookAnswers.map((answer) => (
+            <g key={answer.x}>
+              <rect
+                x={answer.x - 11}
+                y="95"
+                width="22"
+                height="13"
+                rx="6.5"
+                fill={answer.label === "Yes" ? "#ffffff" : "#27272a"}
+                stroke={answer.label === "Yes" ? "none" : "#71717a"}
+              />
+              <text x={answer.x} y="104.5" fill={answer.label === "Yes" ? "#18181b" : "#f4f4f5"}>
+                {answer.label}
+              </text>
+            </g>
+          ))}
+        </g>
+        <g fontSize="9.5" fontWeight="600" textAnchor="middle">
+          {playbookLeaves.map((leaf) => (
+            <g key={leaf.label}>
+              <rect x={leaf.x} y="116" width="74" height="24" rx="12" fill="#6ee7b7" />
+              <text x={leaf.x + 37} y="131" fill="#022c22">
+                {leaf.label}
+              </text>
+            </g>
+          ))}
+        </g>
+        <text x="160" y="164" textAnchor="middle" fontSize="9" fill="#a1a1aa" letterSpacing="1.5">
+          DEFAULT: SILENCE
+        </text>
+      </svg>
     </div>
   );
 }

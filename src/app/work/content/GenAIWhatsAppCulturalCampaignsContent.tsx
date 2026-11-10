@@ -1,216 +1,356 @@
-import Image from "next/image";
+import {
+  ArrowUpRight,
+  CalendarHeart,
+  Globe,
+  Library,
+  Palette,
+  ScanSearch,
+  ShieldCheck,
+  Sparkles,
+  Target,
+  TrendingDown,
+  Users,
+  Zap,
+} from "lucide-react";
 import type { CaseStudySection } from "@/app/components/case-study/types";
+import {
+  Accent,
+  CaseStudyHero,
+  Chips,
+  Divider,
+  GoalPanel,
+  HeroAccent,
+  IconPoints,
+  InShortCard,
+  Screen,
+  SectionHeading,
+  SplitWithScreen,
+  StatsPanel,
+  type IconPoint,
+} from "@/app/components/case-study/blocks";
 
 export const genAIWhatsAppCulturalCampaignSections: CaseStudySection[] = [
-  { id: "summary", title: "To summarize" },
-  { id: "key-impact", title: "Key impact" },
+  { id: "in-short", title: "In short" },
   { id: "global-local-relevance", title: "A global product with low local relevance" },
   { id: "insight-growth-lever", title: "The insight: Cultural expression as a growth lever" },
   { id: "localized-gtm-engine", title: "The strategy: The localized GTM engine" },
-  { id: "ai-content-studio", title: "Execution: Building the AI Content Studio (0→1)" },
-  { id: "india-campaign", title: "Our first cultural campaign: India Independence Day" },
-  { id: "scaling-model", title: "Scaling cultural campaign model" },
+  { id: "ai-content-studio", title: "Building the AI Content Studio (0→1)" },
+  { id: "india-campaign", title: "Our first campaign: India Independence Day" },
+  { id: "scaling-model", title: "Scaling the campaign model" },
   { id: "impact", title: "The impact" },
 ];
+
+const auditPoints: IconPoint[] = [
+  {
+    Icon: ScanSearch,
+    label: "Western-centric inspiration",
+    text: "A full audit of WhatsApp's GenAI experience found our “Inspiration” prompts heavily skewed toward Western events, like the Oscars.",
+  },
+  {
+    Icon: TrendingDown,
+    label: "A 4% regression outside the US",
+    text: "Engagement was slipping across non-US markets.",
+  },
+  {
+    Icon: Globe,
+    label: "Key regions underperforming",
+    text: "India and Indonesia, critical to WhatsApp's global footprint, lagged for lack of cultural relevance.",
+  },
+];
+
+const strategyPoints: IconPoint[] = [
+  {
+    Icon: Target,
+    label: "Market prioritization",
+    text: "Deciding which markets to invest in as our primary growth engine for AI image generation.",
+  },
+  {
+    Icon: CalendarHeart,
+    label: "The cultural calendar",
+    text: "In-app campaigns covering high-intent moments and holidays.",
+    chips: ["Diwali", "Rakhi", "Independence Day"],
+  },
+  {
+    Icon: Zap,
+    label: "Agile execution with engineers",
+    text: "Implementation timelines and launch cadences for fast, trend-responsive rollouts.",
+  },
+];
+
+const studioPoints: IconPoint[] = [
+  {
+    Icon: Palette,
+    label: "In-house creative pivot",
+    text: "I negotiated a partnership with the Product Design illustration team to expand their mandate into AI generation, turning a traditional design department into a nimble, AI-native art agency.",
+  },
+  {
+    Icon: Library,
+    label: "The high-intent prompt library",
+    text: "I oversaw a localized prompt architecture that moved beyond generic descriptions, so models produced high-quality, culturally nuanced outputs for regional celebrations.",
+  },
+  {
+    Icon: ShieldCheck,
+    label: "Governance and safety",
+    text: "I set up a streamlined review framework with Legal, Policy, and i18n so every AI-generated asset was safe, inclusive, and globally compliant.",
+  },
+];
+
+const indiaResultPoints: IconPoint[] = [
+  {
+    Icon: ArrowUpRight,
+    label: "Instantaneous step-change",
+    text: "Global DAU surged from a 1.0M baseline to 1.7M overnight, a 70% increase.",
+  },
+  {
+    Icon: Users,
+    label: "Market dominance",
+    text: "We reached a peak of 1.7M DAU in India alone, proving a single localized activation could lift the entire global product metric.",
+  },
+];
+
+const scaledCampaigns = [
+  { name: "Diwali", value: "+175K", detail: "pDAU, and a 19% increase in media engagement" },
+  { name: "Rakhi", value: "~130K+", detail: "pDAU impact through chat-based creation" },
+  {
+    name: "Indonesia Independence Day",
+    value: "30K",
+    detail: "high-intent users activated, stabilizing a declining region",
+  },
+];
+
+const impactStats = [
+  { value: "+70%", label: "global baseline DAU (1.0M to 1.7M) from a single-market activation" },
+  { value: "+700K", label: "pDAU during India Independence Day, the largest cultural gain in product history" },
+  { value: "−4% → ↑", label: "international regression reversed into sustained, repeatable growth" },
+];
+
+function CampaignIllustration() {
+  // Each flag hangs from the bunting curve at its center x.
+  const flags = [
+    { x: 46, y: 34.1, className: "fill-amber-400" },
+    { x: 80, y: 40.6, fill: "#ffffff" },
+    { x: 114, y: 42.5, className: "fill-emerald-500" },
+    { x: 148, y: 40.3, className: "fill-amber-400" },
+    { x: 182, y: 33.5, fill: "#ffffff" },
+  ];
+  return (
+    <svg viewBox="0 0 240 200" className="w-full h-auto" aria-hidden>
+      {/* Bunting */}
+      <path d="M30 26c50 22 130 22 180 0" fill="none" stroke="#18181b" strokeWidth="3" strokeLinecap="round" />
+      {flags.map((flag) => (
+        <path
+          key={flag.x}
+          d={`M${flag.x} ${flag.y}l14 0-7 18z`}
+          className={flag.className}
+          fill={flag.fill}
+          stroke="#18181b"
+          strokeWidth="2.5"
+          strokeLinejoin="round"
+        />
+      ))}
+      {/* Greeting card */}
+      <rect x="54" y="70" width="132" height="112" rx="16" fill="#ffffff" stroke="#18181b" strokeWidth="3" />
+      <rect x="66" y="82" width="108" height="58" rx="10" className="fill-emerald-200" />
+      <circle cx="120" cy="111" r="16" className="fill-amber-300" stroke="#18181b" strokeWidth="2.5" />
+      <path d="M78 156h60M78 168h36" stroke="#18181b" strokeWidth="4" strokeLinecap="round" />
+      {/* Sparkles */}
+      <path
+        d="M206 76c2 10 5 13 15 15-10 2-13 5-15 15-2-10-5-13-15-15 10-2 13-5 15-15z"
+        className="fill-emerald-500"
+        stroke="#18181b"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M30 120c1 6 3 8 9 9-6 1-8 3-9 9-1-6-3-8-9-9 6-1 8-3 9-9z"
+        fill="#ffffff"
+        stroke="#18181b"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+const heroTags = [
+  { Icon: CalendarHeart, label: "Diwali", className: "left-0 top-1/3" },
+  { Icon: Sparkles, label: "Independence Day", className: "right-0 top-1/2" },
+  { Icon: Globe, label: "India · Indonesia", className: "left-2 bottom-1" },
+];
+
+export function GenAICulturalCampaignsHero() {
+  return (
+    <CaseStudyHero
+      eyebrow="Case study · WhatsApp"
+      title={
+        <>
+          Driving GenAI adoption with <HeroAccent>cultural campaigns</HeroAccent>
+        </>
+      }
+      subtitle="Regional holidays, an AI Content Studio, and global GenAI growth."
+      tags={["0→1 program", "GenAI images", "Global markets"]}
+      illustration={<CampaignIllustration />}
+      floatingTags={heroTags}
+    />
+  );
+}
 
 export default function GenAIWhatsAppCulturalCampaignsContent() {
   return (
     <article>
-      <h2 id="summary" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">To summarize</h2>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-6">
-        In early 2026, WhatsApp&apos;s GenAI image creation experience faced a
-        critical ceiling: while adoption was strong in the US, international
-        engagement was regressing. I identified that our US-centric branding and
-        promotional strategy for AI images was failing our highest-growth
-        markets. From the ground up, I architected a new regional holiday
-        calendar program and established an AI content team to power these new
-        cultural campaigns, driving up AI image engagement for key markets.
-      </p>
+      <SectionHeading id="in-short">In short</SectionHeading>
+      <div className="grid gap-4 sm:grid-cols-2 mb-6">
+        <InShortCard label="The problem">
+          <p className="text-zinc-700 dark:text-zinc-300">
+            In early 2026, GenAI image creation adoption was strong in the US,
+            but international engagement was regressing. Our US-centric branding
+            and promotion were failing our highest-growth markets.
+          </p>
+        </InShortCard>
+        <InShortCard label="What I did">
+          <p className="text-zinc-700 dark:text-zinc-300">
+            I built a regional holiday calendar program from the ground up and
+            established an AI content team to power cultural campaigns, driving
+            up AI image engagement in key markets.
+          </p>
+        </InShortCard>
+        <InShortCard label="Key impact" className="sm:col-span-2">
+          <div className="grid gap-4 sm:grid-cols-3">
+            {[
+              { value: "+70%", label: "global baseline DAU from one market" },
+              { value: "+700K", label: "pDAU on India Independence Day" },
+              { value: "−4% → ↑", label: "international regression reversed" },
+            ].map((stat) => (
+              <div key={stat.value}>
+                <p className="text-3xl font-semibold tracking-tight text-emerald-700 dark:text-emerald-400">
+                  {stat.value}
+                </p>
+                <p className="mt-1 text-sm text-zinc-700 dark:text-zinc-300">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </InShortCard>
+      </div>
 
-      <h2 id="key-impact" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">Key impact</h2>
-      <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
-        <li>
-          +70% increase in global baseline DAU (from 1.0M to 1.7M) driven by a
-          single-market activation.
-        </li>
-        <li>
-          +700K pDAU surge during the India Independence Day launch (the largest
-          cultural gain in product history).
-        </li>
-        <li>
-          Reversed a -4% regression in international markets into sustained,
-          repeatable growth.
-        </li>
-      </ul>
+      <Divider />
 
-      <h2 id="global-local-relevance" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
-        A global product with low local relevance
-      </h2>
-      <div className="my-6">
-        <div className="max-w-[280px]">
-          <Image
+      <SectionHeading id="global-local-relevance">A global product with low local relevance</SectionHeading>
+      <SplitWithScreen
+        screen={
+          <Screen
             src="/work/whatsapp-genai-cultural-campaigns/inspiration-grid-western-centric.png"
             alt="Meta AI image creation screen showing a grid of Western-leaning inspiration prompts such as superhero chores, red carpet, and action hero themes"
-            width={800}
-            height={1200}
-            className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 h-auto"
+            width={473}
+            height={1024}
+            caption="Cowboys and red carpet events are definitely not universally relevant concepts."
           />
-        </div>
-        <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-500 italic">
-          Cowboys and red carpet events are definitely not universally relevant concepts. 
-        </p>
-      </div>
+        }
+      >
+        <IconPoints points={auditPoints} />
+      </SplitWithScreen>
+
+      <Divider />
+
+      <SectionHeading id="insight-growth-lever">The insight: Cultural expression as a growth lever</SectionHeading>
+      <GoalPanel
+        Icon={Sparkles}
+        eyebrow="The insight"
+        headline={
+          <>
+            In high-growth markets, people used GenAI for{" "}
+            <Accent>cultural celebration</Accent>, not generic use cases.
+          </>
+        }
+      >
+        Working with AI Expressions user research and market analysis, I found
+        people wanted to create and share these within their social circles:
+      </GoalPanel>
+      <Chips items={["Personalized festival greetings", "Holiday stickers", "Patriotic imagery"]} />
+
+      <Divider />
+
+      <SectionHeading id="localized-gtm-engine">The strategy: The localized GTM engine</SectionHeading>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
-        A comprehensive audit of WhatsApp&apos;s GenAI experience revealed a
-        significant growth constraint. Our &ldquo;Inspiration&rdquo; prompts were
-        heavily skewed toward Western-centric events (e.g., the Oscars), leading
-        to a 4% regression in engagement across non-US markets. Key regions like
-        India and Indonesia—critical to WhatsApp&apos;s global footprint—were
-        underperforming due to a lack of cultural relevance.
+        To start this new marketing operation, I rallied cross-functional
+        partners to choose viable holidays, check local relevance, screen for
+        sensitive or legal risks, and plan launch timelines across design,
+        marketing, translation, and engineering. We anchored the strategy on
+        three pillars:
       </p>
+      <IconPoints points={strategyPoints} />
 
-      <h2 id="insight-growth-lever" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
-        The insight: Cultural expression as a growth lever
-      </h2>
+      <Divider />
+
+      <SectionHeading id="ai-content-studio">Building the AI Content Studio (0→1)</SectionHeading>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
-        Collaborating with AI Expressions user research and market analysis
-        teams, I uncovered a pivotal behavioral pattern: In high-growth markets,
-        GenAI was not being used for generic use cases, but for cultural
-        celebration. Users sought to create personalized festival greetings,
-        holiday stickers and patriotic imagery to share within their social
-        circles.
-      </p>
-
-      <h2 id="localized-gtm-engine" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
-        The strategy: The localized GTM engine
-      </h2>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-        To get my new marketing operation started, I rallied a group of
-        cross-functional partners to choose viable holidays, check for local
-        relevance, check for any sensitive or legal risks, and plan launch
-        timelines across design, marketing, translations, and engineering teams.
-        We anchored our strategy on three pillars:
-      </p>
-      <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
-        <li>
-          <strong>Market prioritization:</strong> Deciding which markets to
-          invest resources in and consider our primary growth engine for AI image
-          generation.
-        </li>
-        <li>
-          <strong>The cultural calendar:</strong> Devising in-app campaigns that
-          cover high-intent moments and holidays (Diwali, Rakhi, Independence
-          Day).
-        </li>
-        <li>
-          <strong>Agile execution with engineers:</strong> Planning implementation
-          timelines and launch cadences for fast, trend-responsive rollouts on
-          the app.
-        </li>
-      </ul>
-
-      <h2 id="ai-content-studio" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
-        Execution: Building the &ldquo;AI Content Studio&rdquo; (0→1)
-      </h2>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         With no existing infrastructure for localized AI asset production, I
-        built a new operational model through influencing crucial partners:
+        built a new operating model by influencing crucial partners.
       </p>
-      <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
-        <li>
-          <strong>In-house creative pivot:</strong> I negotiated a partnership
-          with the Product Design illustration team to expand their mandate into
-          AI generation. This transformed a traditional design department into a
-          nimble, AI-native art agency.
-        </li>
-        <li>
-          <strong>The high-intent prompt library:</strong> I oversaw the
-          development of a localized prompt architecture. By moving beyond
-          generic descriptions, we engineered a library that allowed models to
-          produce high-quality, culturally nuanced outputs specific to regional
-          celebrations.
-        </li>
-        <li>
-          <strong>Governance &amp; safety:</strong> I established a streamlined
-          review framework involving Legal, Policy, and i18n to ensure all
-          AI-generated assets were safe, inclusive, and globally compliant.
-        </li>
-      </ul>
+      <IconPoints points={studioPoints} />
 
-      <h2 id="india-campaign" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
-        Our first cultural campaign: India Independence Day
-      </h2>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-        For our first pilot project, I identified a viral trend in patriotic
-        content in India — signaled by our social media team. My partners and I
-        mobilized a 24-hour cross-functional sprint to ship India Independence
-        Day AI image content to encourage users in India to send images and
-        stickers celebrating the holiday on their WhatsApp statuses and in their
-        chat conversations.
-      </p>
-      <p className="font-semibold text-zinc-900 dark:text-zinc-50 mb-2">
-        The result
-      </p>
-      <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
-        <li>
-          <strong>Instantaneous step-change:</strong> Global DAU surged from a
-          1.0M baseline to 1.7M overnight—a 70% increase.
-        </li>
-        <li>
-          <strong>Market dominance:</strong> We reached a peak of 1.7M DAU in
-          India alone, proving that a single, localized activation could lift
-          the entire global product metric.
-        </li>
-      </ul>
+      <Divider />
 
-      <h2 id="scaling-model" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
-        Scaling cultural campaign model
-      </h2>
-      <div className="my-6">
-        <div className="max-w-[280px]">
-          <Image
+      <SectionHeading id="india-campaign">Our first campaign: India Independence Day</SectionHeading>
+      <GoalPanel
+        Icon={Zap}
+        eyebrow="The pilot"
+        headline={
+          <>
+            A <Accent>24-hour</Accent> cross-functional sprint to catch a viral
+            trend.
+          </>
+        }
+      >
+        Our social media team signaled a viral trend in patriotic content in
+        India. We shipped Independence Day AI image content so people could
+        celebrate in their WhatsApp statuses and chats.
+      </GoalPanel>
+
+      <h3 className="text-lg font-semibold mt-6 mb-4">In execution: Independence Day in WhatsApp</h3>
+      <SplitWithScreen
+        screen={
+          <Screen
             src="/work/whatsapp-genai-cultural-campaigns/genai-cultural-campaigns-thumbnail.png"
-            alt="WhatsApp GenAI cultural campaigns thumbnail"
-            width={800}
-            height={1200}
-            className="w-full rounded-lg border border-zinc-200 dark:border-zinc-800 h-auto"
+            alt="Create with Meta AI screen in WhatsApp showing a generated Happy Independence Day image with the Indian flag, plus alternate image options"
+            width={473}
+            height={1024}
+            caption="Creating an Independence Day image with Meta AI."
           />
-        </div>
-        <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-500 italic">
-          Cowboys and red carpet events are definitely not universally relevant concepts. 
-        </p>
-      </div>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-        I successfully codified this approach into a repeatable global playbook,
-        leading to sustained gains across the 2026 calendar:
-      </p>
-      <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400 mb-6">
-        <li>
-          <strong>Diwali:</strong> Generated +175K pDAU and a 19% increase in
-          media engagement.
-        </li>
-        <li>
-          <strong>Rakhi:</strong> Achieved ~130K+ pDAU impact through chat-based
-          creation.
-        </li>
-        <li>
-          <strong>Indonesia expansion:</strong> Applied the model to
-          Indonesia&apos;s Independence Day, stabilizing a declining region and
-          activating 30K high-intent users.
-        </li>
-      </ul>
+        }
+      >
+        <p className="font-semibold text-zinc-900 dark:text-zinc-100 mb-4">The result</p>
+        <IconPoints points={indiaResultPoints} />
+      </SplitWithScreen>
 
-      <h2 id="impact" className="text-xl font-semibold mt-8 mb-4 scroll-mt-28">
-        The impact
-      </h2>
-      <p className="text-zinc-600 dark:text-zinc-400">
-        This initiative fundamentally redefined the growth trajectory for GenAI
-        at WhatsApp. By moving from a centralized, static model to a localized,
-        high-velocity GTM engine, we transformed content into a primary
-        conversion-driving lever. My work turned a regression into a sustained
-        global growth engine, establishing a new framework for how AI products can
-        achieve true global resonance.
+      <Divider />
+
+      <SectionHeading id="scaling-model">Scaling the campaign model</SectionHeading>
+      <p className="text-zinc-600 dark:text-zinc-400 mb-6">
+        I codified the approach into a repeatable global playbook, leading to
+        sustained gains across the 2026 calendar.
       </p>
+      <div className="mb-8 grid gap-4 sm:grid-cols-3">
+        {scaledCampaigns.map((campaign) => (
+          <InShortCard key={campaign.name} label={campaign.name}>
+            <p className="text-3xl font-semibold tracking-tight text-emerald-700 dark:text-emerald-400">
+              {campaign.value}
+            </p>
+            <p className="mt-1 text-sm text-zinc-700 dark:text-zinc-300">{campaign.detail}</p>
+          </InShortCard>
+        ))}
+      </div>
+
+      <Divider />
+
+      <SectionHeading id="impact">The impact</SectionHeading>
+      <StatsPanel Icon={ArrowUpRight} eyebrow="A new growth trajectory" stats={impactStats}>
+        <p className="text-sm text-zinc-400">
+          Moving from a centralized, static model to a localized, high-velocity
+          GTM engine turned content into a primary conversion lever. It turned
+          a regression into a sustained global growth engine, and set a new
+          framework for how AI products can achieve true global resonance.
+        </p>
+      </StatsPanel>
     </article>
   );
 }
