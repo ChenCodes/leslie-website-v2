@@ -82,28 +82,31 @@ function MessengerMark() {
 const companies = [
   { name: "Meta AI", Mark: MetaAIMark },
   { name: "Meta Central Products", Mark: MetaMark },
-  { name: "WhatsApp", Mark: WhatsAppMark },
   { name: "Messenger", Mark: MessengerMark },
   { name: "Muse", Mark: MuseMark },
+  { name: "WhatsApp", Mark: WhatsAppMark },
 ];
 
 export default function WorkedAt() {
   return (
-    <div className="mt-10">
-      <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+    <div className="py-6">
+      <p className="mb-5 text-xs font-medium uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
         I&apos;ve worked on
       </p>
-      <ul className="flex flex-wrap items-center gap-x-8 gap-y-4">
-        {companies.map(({ name, Mark }, i) => (
-          <li key={name} className="flex items-center gap-8">
-            {i > 0 && <span className="h-6 w-px bg-zinc-200 dark:bg-zinc-800" aria-hidden />}
-            <span className="flex items-center gap-2.5 text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+      {/* One line always: spread edge to edge, scrolls sideways on narrow screens. */}
+      <div className="-mx-6 overflow-x-auto px-6 [scrollbar-width:none] md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden">
+        <ul className="flex w-max min-w-full flex-nowrap items-center justify-between gap-10">
+          {companies.map(({ name, Mark }) => (
+            <li
+              key={name}
+              className="flex shrink-0 items-center gap-2.5 whitespace-nowrap text-base lg:text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-100"
+            >
               <Mark />
               {name}
-            </span>
-          </li>
-        ))}
-      </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

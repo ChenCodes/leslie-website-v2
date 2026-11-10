@@ -190,9 +190,11 @@ export default function Home() {
               </span>{" "}
               and drive product growth.
             </p>
-            <WorkedAt />
           </div>
           <WritingWithAIIllustration />
+          <div className="md:col-span-2">
+            <WorkedAt />
+          </div>
         </section>
 
         {/* Work projects: GIF + name + project + year + status */}
