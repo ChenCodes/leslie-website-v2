@@ -19,7 +19,6 @@ import type { CaseStudySection } from "@/app/components/case-study/types";
 import {
   Accent,
   CaseStudyHero,
-  Chips,
   Divider,
   GoalPanel,
   HeroAccent,
@@ -273,17 +272,17 @@ export default function AISickersWhatsAppContent() {
         In annual research, WhatsApp users consistently described existing
         stickers as:
       </p>
-      <div className="mb-6">
-        <Chips
-          items={[
-            "Irrelevant to their conversations",
-            "Too childish",
-            "Visually complex",
-            "Overly colorful",
-            "Culturally or personally mismatched",
-          ]}
-        />
-      </div>
+      <ul className="mb-6 list-disc pl-6 space-y-1.5 text-zinc-600 dark:text-zinc-400 marker:text-zinc-900 dark:marker:text-white">
+        {[
+          "Irrelevant to their conversations",
+          "Too childish",
+          "Visually complex",
+          "Overly colorful",
+          "Culturally or personally mismatched",
+        ].map((complaint) => (
+          <li key={complaint}>{complaint}</li>
+        ))}
+      </ul>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6">
         Instead of searching limited packs, AI stickers let people generate the
         perfect sticker for their situation.
@@ -304,7 +303,7 @@ export default function AISickersWhatsAppContent() {
           headline={
             <>
               Some testers thought &ldquo;AI&rdquo; was a support agent named{" "}
-              <Accent>&ldquo;Al.&rdquo;</Accent>
+              <Accent>&ldquo;AL.&rdquo;</Accent>
             </>
           }
         >
